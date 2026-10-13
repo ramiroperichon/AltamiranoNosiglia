@@ -1,0 +1,7 @@
+{
+ "cordoba": ["La Cumbrecita", "Quebrada del Condorito", "Cerro Champaquí", "Capilla del Monte Uritorco", "Embalse Los Molinos", "Villa Carlos Paz lago San Roque"],
+ "invierno": ["Cerro Chapelco", "La Hoya Esquel", "Caviahue nieve", "Cerro Castor Ushuaia", "Bariloche nieve invierno", "Patagonia winter snow forest"],
+ "verano": ["Puerto Madryn playa", "Pinamar playa", "Villa Gesell playa", "Monte Hermoso playa", "Playa Unión Rawson", "Necochea playa"],
+ "escapadas": ["San Martín de los Andes", "Villa La Angostura", "Cafayate", "Tandil sierras", "Valle de Uco"],
+ "bariloche2": ["Cerro Campanario Bariloche", "Circuito Chico Bariloche", "Lago Moreno Bariloche", "Lago Gutiérrez"]
+}

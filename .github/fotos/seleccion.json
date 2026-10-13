@@ -1,0 +1,15 @@
+[
+ {"id": "hero-bariloche", "titulo": "File:Llao Llao Peninsula.jpg", "anchos": [1280, 1920, 2560, 3840], "calidad": 78},
+ {"id": "bariloche", "titulo": "File:VistadelLagoNahuelHuapi.jpg", "ratio": 1.5, "focoX": 0.5, "anchos": [800, 1600]},
+ {"id": "iguazu", "titulo": "File:Iguazu-Falls-January-2013.jpg", "anchos": [800, 1600]},
+ {"id": "mendoza", "titulo": "File:Vineyard in Mendoza, Argentina.jpg", "anchos": [800, 1600]},
+ {"id": "turismo-mendoza", "titulo": "File:Finca - foto 1 of 6.jpg", "anchos": [800, 1600]},
+ {"id": "jujuy", "titulo": "File:Purmamarca (Argentine).JPG", "anchos": [800, 1600]},
+ {"id": "mardelplata", "titulo": "File:Mar del Plata City.jpg", "anchos": [800, 1600]},
+ {"id": "buenosaires", "titulo": "File:Puerto Madero, Buenos Aires, Argentina2.jpg", "ratio": 1.5, "focoX": 0.45, "anchos": [800, 1600]},
+ {"id": "internacional", "titulo": "File:A wing tip of an airplane (40118125441).jpg", "anchos": [800, 1600]},
+ {"id": "ruta-flechas", "titulo": "File:Ruta-40-Northern-Argentina.jpg", "anchos": [800, 1600]},
+ {"id": "ruta-santacruz", "titulo": "File:Ruta 40, Santa Cruz.jpg", "ratio": 0.8, "focoX": 0.5, "anchos": [700, 1400]},
+ {"id": "ruta-amanecer", "titulo": "File:Ruta-40-empty.jpg", "ratio": 1.6, "focoX": 0.5, "anchos": [800, 1600]},
+ {"id": "tilcara", "titulo": "File:Tilcara-VistadesdePucaradeTilcara-01158.jpg", "anchos": [800, 1600]}
+]

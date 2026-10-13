@@ -4,8 +4,9 @@ import json, os, re, time, urllib.parse, urllib.request
 
 UA = "AltamiranoNosigliaSite/1.0 (https://github.com/ramiroperichon/AltamiranoNosiglia)"
 API = "https://commons.wikimedia.org/w/api.php"
-OUT = "fotos-candidatas"
-TEMAS = json.load(open(".github/fotos/temas.json", encoding="utf-8"))
+import sys
+OUT = sys.argv[2] if len(sys.argv) > 2 else "fotos-candidatas"
+TEMAS = json.load(open(sys.argv[1] if len(sys.argv) > 1 else ".github/fotos/temas.json", encoding="utf-8"))
 LIC_OK = re.compile(r"^(cc0|public domain|pd|cc[ -]by(-sa)?[ -]\d)", re.I)
 
 def get(url, binary=False):
@@ -65,15 +66,3 @@ for tema, consultas in TEMAS.items():
 
 json.dump(resumen, open(os.path.join(OUT, "candidatas.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
-# Resolver el enlace corto de Google Maps
-try:
-    req = urllib.request.Request("https://maps.app.goo.gl/GdnRrny68zMTDcYz6", headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        final = r.geturl()
-        html = r.read().decode("utf-8", "ignore")
-    titulo = re.search(r'<meta (?:content="([^"]*)" )?property="og:title"(?: content="([^"]*)")?', html)
-    desc = re.search(r'<meta (?:content="([^"]*)" )?property="og:description"(?: content="([^"]*)")?', html)
-    open(os.path.join(OUT, "maps.txt"), "w", encoding="utf-8").write(
-        f"final={final}\ntitulo={titulo.groups() if titulo else ''}\ndesc={desc.groups() if desc else ''}\n")
-except Exception as e:
-    open(os.path.join(OUT, "maps.txt"), "w").write(f"error={e}\n")
