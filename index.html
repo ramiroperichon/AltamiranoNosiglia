@@ -708,6 +708,11 @@
     .dato span { display: block; font-weight: 600; overflow-wrap: anywhere; }
     @media (max-width: 820px) { .contacto-cabecera, .contacto-acciones { grid-template-columns: 1fr; } .accion { min-height: 0; } }
 
+    .contacto-mapa { margin-top: 24px; border-radius: var(--radio-lg); overflow: hidden; box-shadow: var(--sombra-sm); background: var(--celeste); aspect-ratio: 16 / 7; }
+    .contacto-mapa[hidden] { display: none; }
+    .contacto-mapa iframe { display: block; width: 100%; height: 100%; border: 0; }
+    @media (max-width: 640px) { .contacto-mapa { aspect-ratio: 4 / 3; } }
+
     /* =========================================================
        FOOTER
        ========================================================= */
@@ -723,6 +728,11 @@
     .footer-lista .icono { width: 1.05rem; height: 1.05rem; }
     .footer-lista li > span { display: inline-flex; gap: .55rem; }
     .footer-legal { margin-top: clamp(40px, 6vw, 64px); padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, .12); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 2rem; font-size: .86rem; color: rgba(255, 255, 255, .62); }
+    .creditos { margin-top: clamp(32px, 5vw, 48px); font-size: .82rem; color: rgba(255, 255, 255, .62); }
+    .creditos[hidden] { display: none; }
+    .creditos summary { cursor: pointer; font-weight: 700; color: rgba(255, 255, 255, .8); width: fit-content; }
+    .creditos ul { margin-top: .9rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: .45rem 2rem; }
+    .creditos a { color: rgba(255, 255, 255, .8); }
     @media (max-width: 960px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-grid > :first-child { grid-column: 1 / -1; } }
     @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
 
@@ -896,7 +906,7 @@
          ========================================================= -->
     <section class="hero" id="inicio" aria-labelledby="hero-titulo">
       <!-- Para usar una foto o video real: completar IMAGENES.hero en la configuración (JS). -->
-      <div class="hero-media media" data-media="hero" data-escena="lagos" data-alt="Ilustración de un lago entre montañas con bosques al atardecer" data-eager></div>
+      <div class="hero-media media" data-media="hero" data-escena="lagos" data-alt="Península Llao Llao y el lago Nahuel Huapi entre bosques y montañas, en Bariloche" data-sizes="100vw" data-eager></div>
 
       <div class="contenedor">
         <div class="hero-contenido">
@@ -944,7 +954,7 @@
 
         <div class="servicios-grid">
           <article class="servicio turismo revelar">
-            <div class="media" data-media="servicioTurismo" data-escena="vinedos" data-alt="Ilustración de cordillera nevada y viñedos bajo un cielo despejado">
+            <div class="media" data-media="servicioTurismo" data-escena="vinedos" data-alt="Camino entre álamos otoñales y viñedos en Mendoza, con la cordillera de fondo" data-sizes="(max-width: 820px) 100vw, 50vw">
               <span class="servicio-num"><svg class="icono" aria-hidden="true"><use href="#i-montana"/></svg>01 · Turismo</span>
             </div>
             <div class="servicio-cuerpo">
@@ -963,7 +973,7 @@
           </article>
 
           <article class="servicio pasajes revelar" style="--d:.1s">
-            <div class="media" data-media="servicioPasajes" data-escena="ruta" data-alt="Ilustración de un colectivo de larga distancia circulando por una ruta entre sierras">
+            <div class="media" data-media="servicioPasajes" data-escena="ruta" data-alt="Ruta 40 al amanecer, recta y despejada hacia el horizonte" data-sizes="(max-width: 820px) 100vw, 50vw">
               <span class="servicio-num"><svg class="icono" aria-hidden="true"><use href="#i-colectivo"/></svg>02 · Pasajes</span>
             </div>
             <div class="servicio-cuerpo">
@@ -990,7 +1000,7 @@
     <section class="seccion" id="nosotros" aria-labelledby="nosotros-titulo">
       <div class="contenedor nosotros-grid">
         <div class="nosotros-visual revelar">
-          <div class="media" data-media="nosotros" data-escena="camino" data-alt="Ilustración de un camino que se pierde entre montañas">
+          <div class="media" data-media="nosotros" data-escena="camino" data-alt="Ruta 40 atravesando la estepa de Santa Cruz" data-sizes="(max-width: 900px) 90vw, 45vw">
           </div>
           <div class="nosotros-sello" aria-hidden="true">
             <span><svg class="icono" aria-hidden="true"><use href="#i-montana"/></svg>Viajes turísticos</span>
@@ -1057,7 +1067,7 @@
 
         <div class="temporadas-grid">
           <article class="temporada revelar">
-            <div class="media" data-media="invierno" data-escena="nieve" data-alt="Ilustración de montañas nevadas y pinos cubiertos de nieve"></div>
+            <div class="media" data-media="invierno" data-escena="nieve" data-alt="Ruta 40 cubierta de nieve con montañas nevadas de fondo" data-sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"></div>
             <div class="temporada-cuerpo">
               <span class="temporada-tag"><svg class="icono" aria-hidden="true"><use href="#i-copo"/></svg>Invierno</span>
               <h3>Vacaciones de invierno</h3>
@@ -1070,7 +1080,7 @@
           </article>
 
           <article class="temporada revelar" style="--d:.1s">
-            <div class="media" data-media="verano" data-escena="playa" data-alt="Ilustración de una playa soleada con mar y sombrilla"></div>
+            <div class="media" data-media="verano" data-escena="playa" data-alt="Playa de arena clara y mar turquesa en Puerto Madryn" data-sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"></div>
             <div class="temporada-cuerpo">
               <span class="temporada-tag"><svg class="icono" aria-hidden="true"><use href="#i-sol"/></svg>Verano</span>
               <h3>Vacaciones de verano</h3>
@@ -1083,7 +1093,7 @@
           </article>
 
           <article class="temporada revelar" style="--d:.2s">
-            <div class="media" data-media="escapadas" data-escena="escapada" data-alt="Ilustración de un pueblo entre sierras al atardecer"></div>
+            <div class="media" data-media="escapadas" data-escena="escapada" data-alt="Lago Lácar y montañas en San Martín de los Andes" data-sizes="(max-width: 960px) 100vw, 33vw"></div>
             <div class="temporada-cuerpo">
               <span class="temporada-tag"><svg class="icono" aria-hidden="true"><use href="#i-brujula"/></svg>Todo el año</span>
               <h3>Escapadas y salidas especiales</h3>
@@ -1150,7 +1160,7 @@
             <li class="paso"><span class="paso-num">2</span><div><strong>Revisá tu mensaje</strong><span>Preparamos el texto con los datos que ingresaste.</span></div></li>
             <li class="paso"><span class="paso-num">3</span><div><strong>Envialo por WhatsApp</strong><span>La consulta se envía cuando vos la confirmás desde WhatsApp.</span></div></li>
           </ol>
-          <div class="media" data-media="consulta" data-escena="mundo" data-alt="Ilustración de un avión surcando el cielo entre nubes al atardecer"></div>
+          <div class="media" data-media="consulta" data-escena="mundo" data-alt="Ruta 40 entre formaciones rocosas en la Quebrada de las Flechas, Salta" data-sizes="40vw"></div>
         </div>
 
         <div class="form-card revelar" style="--d:.1s">
@@ -1438,6 +1448,7 @@
 
         <!-- Se completa solo con los datos cargados en EMPRESA -->
         <ul class="contacto-datos" id="contacto-datos" aria-label="Datos de contacto" hidden></ul>
+        <div class="contacto-mapa" id="contacto-mapa" hidden></div>
       </div>
     </section>
   </main>
@@ -1497,9 +1508,13 @@
         </div>
       </div>
 
+      <details class="creditos" id="creditos" hidden>
+        <summary>Créditos de las fotografías</summary>
+        <ul id="creditos-lista"></ul>
+      </details>
       <div class="footer-legal">
         <p>© <span id="anio"></span> Altamirano Nosiglia | Viajes y turismo. Todos los derechos reservados.</p>
-        <p>Las ilustraciones son de referencia.</p>
+        <p id="creditos-resumen">Las imágenes son de referencia.</p>
       </div>
     </div>
   </footer>
@@ -1528,28 +1543,57 @@
     nombre: "Altamirano Nosiglia",
     // Formato internacional, SOLO dígitos (sin +, espacios, guiones ni paréntesis).
     // Ejemplo de formato para Argentina: 549 + característica + número.
-    whatsapp: "REEMPLAZAR_POR_NUMERO_REAL",
+    whatsapp: "5493794788375",
+    whatsappTexto: "+54 9 379 478-8375",   // Cómo se muestra el número en la página.
     telefono: "",     // Teléfono alternativo, tal como se quiere mostrar.
     email: "",
     instagram: "",    // URL completa: https://www.instagram.com/usuario
     facebook: "",     // URL completa: https://www.facebook.com/pagina
-    direccion: "",
+    direccion: "Lavalle s/n, Mariano I. Loza, Corrientes",
     horarios: "",
+    mapa: "https://maps.app.goo.gl/GdnRrny68zMTDcYz6",  // Enlace de Google Maps a la ubicación.
+    mapaEmbed: "https://www.google.com/maps?q=Boleter%C3%ADa+Altamirano+Nosiglia,+Lavalle+s%2Fn,+Mariano+I.+Loza,+Corrientes&z=15&output=embed",    // URL para el mapa embebido (https://www.google.com/maps?q=LAT,LNG&output=embed). Vacío = sin mapa.
     logo: ""          // URL o ruta del logotipo (ej.: "img/logo.svg"). Vacío = símbolo provisional.
   };
 
   // Fotos reales autorizadas. Vacío = se muestra la ilustración de referencia.
+  // foto("nombre") arma la imagen con sus tamaños: img/nombre-800.jpg, img/nombre-1600.jpg, etc.
+  const foto = (nombre, anchos = [800, 1600]) => ({
+    src: `img/${nombre}-${anchos[anchos.length > 1 ? 1 : 0]}.jpg`,
+    srcset: anchos.map((w) => `img/${nombre}-${w}.jpg ${w}w`).join(", ")
+  });
+
   const IMAGENES = {
-    hero: "",
-    servicioTurismo: "",
-    servicioPasajes: "",
-    nosotros: "",
-    invierno: "",
-    verano: "",
-    escapadas: "",
-    consulta: "",
-    pasajes: ""
+    hero: foto("hero-bariloche", [1280, 1920, 2560, 3840]),
+    servicioTurismo: foto("turismo-mendoza"),
+    servicioPasajes: foto("ruta-amanecer"),
+    nosotros: foto("ruta-santacruz", [700, 1400]),
+    invierno: foto("invierno"),
+    verano: foto("verano"),
+    escapadas: foto("escapadas"),
+    consulta: foto("ruta-flechas"),
+    pasajes: ""   // Vacío: se muestra la ilustración del colectivo.
   };
+
+  // Créditos de las fotografías (obligatorios para licencias Creative Commons BY / BY-SA).
+  const CREDITOS = [
+    { foto: "Península Llao Llao, Bariloche (portada)", autor: "Fernando", licencia: "CC BY-SA 4.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/4.0", fuente: "https://commons.wikimedia.org/wiki/File:Llao_Llao_Peninsula.jpg", cambios: true },
+    { foto: "Vista desde el Cerro Campanario, Bariloche", autor: "Raf24~commonswiki", licencia: "CC BY 4.0", licenciaUrl: "https://creativecommons.org/licenses/by/4.0", fuente: "https://commons.wikimedia.org/wiki/File:Cerro_Campanario_-_view.jpg", cambios: true },
+    { foto: "Cataratas del Iguazú", autor: "Acediscovery", licencia: "CC BY 4.0", licenciaUrl: "https://creativecommons.org/licenses/by/4.0", fuente: "https://commons.wikimedia.org/wiki/File:Iguazu-Falls-January-2013.jpg", cambios: true },
+    { foto: "Viñedos de Mendoza", autor: "David", licencia: "CC BY 2.0", licenciaUrl: "https://creativecommons.org/licenses/by/2.0", fuente: "https://commons.wikimedia.org/wiki/File:Vineyard_in_Mendoza,_Argentina.jpg", cambios: true },
+    { foto: "Purmamarca, Jujuy", autor: "Bachelot Pierre-J-P", licencia: "CC BY-SA 3.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/3.0", fuente: "https://commons.wikimedia.org/wiki/File:Purmamarca_(Argentine).JPG", cambios: true },
+    { foto: "La Cumbrecita, Córdoba", autor: "Fscotta", licencia: "CC BY-SA 4.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/4.0", fuente: "https://commons.wikimedia.org/wiki/File:La_Cumbrecita_Arroyo.jpg", cambios: true },
+    { foto: "Mar del Plata", autor: "EduWiki", licencia: "CC BY-SA 4.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/4.0", fuente: "https://commons.wikimedia.org/wiki/File:Mar_del_Plata_City.jpg", cambios: true },
+    { foto: "Puerto Madero, Buenos Aires", autor: "Diego Delso", licencia: "CC BY-SA 3.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/3.0", fuente: "https://commons.wikimedia.org/wiki/File:Puerto_Madero,_Buenos_Aires,_Argentina2.jpg", cambios: true },
+    { foto: "Ala de avión sobre las nubes", autor: "U.S. Department of Agriculture", licencia: "Public domain", licenciaUrl: "", fuente: "https://commons.wikimedia.org/wiki/File:A_wing_tip_of_an_airplane_(40118125441).jpg", cambios: true },
+    { foto: "Finca en Mendoza", autor: "Santiago Achaval", licencia: "CC BY-SA 4.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/4.0", fuente: "https://commons.wikimedia.org/wiki/File:Finca_-_foto_1_of_6.jpg", cambios: true },
+    { foto: "Ruta 40 nevada", autor: "Paola2022", licencia: "CC BY-SA 4.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/4.0", fuente: "https://commons.wikimedia.org/wiki/File:Ruta_40_Nevada.jpg", cambios: true },
+    { foto: "Playa de Puerto Madryn", autor: "Paco Martinez", licencia: "CC BY-SA 3.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/3.0", fuente: "https://commons.wikimedia.org/wiki/File:Vista_a_una_playa_en_Puerto_Madryn..JPG", cambios: true },
+    { foto: "San Martín de los Andes", autor: "Emilio Küffer from Ciudad Autónoma de Buenos Aires, Argentina", licencia: "CC BY-SA 2.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/2.0", fuente: "https://commons.wikimedia.org/wiki/File:San_Mart%C3%ADn_de_Los_Andes_(25944717001).jpg", cambios: true },
+    { foto: "Ruta 40 al amanecer", autor: "CrookedTreeCreative", licencia: "CC BY-SA 4.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/4.0", fuente: "https://commons.wikimedia.org/wiki/File:Ruta-40-empty.jpg", cambios: true },
+    { foto: "Ruta 40, Santa Cruz", autor: "Raf24~commonswiki", licencia: "CC BY 4.0", licenciaUrl: "https://creativecommons.org/licenses/by/4.0", fuente: "https://commons.wikimedia.org/wiki/File:Ruta_40,_Santa_Cruz.jpg", cambios: true },
+    { foto: "Ruta 40 en la Quebrada de las Flechas", autor: "Dan Peschio", licencia: "CC BY-SA 3.0", licenciaUrl: "https://creativecommons.org/licenses/by-sa/3.0", fuente: "https://commons.wikimedia.org/wiki/File:Ruta-40-Northern-Argentina.jpg", cambios: true }
+  ];
 
   // Mensajes predeterminados de WhatsApp.
   const MENSAJES = {
@@ -1570,21 +1614,21 @@
        nombre, descripcion, categoria, escena (ilustración), imagen (URL opcional), alt (texto alternativo de la imagen).
      Si el array queda vacío, se muestra un bloque que invita a consultar por WhatsApp. */
   const DESTINOS = [
-    { nombre: "Bariloche", categoria: "Lagos y montaña", escena: "lagos", imagen: "", alt: "",
+    { nombre: "Bariloche", categoria: "Lagos y montaña", escena: "lagos", imagen: foto("bariloche"), alt: "Vista del lago Nahuel Huapi y la cordillera nevada desde el Cerro Campanario, en Bariloche",
       descripcion: "Lagos, bosques y montañas de la Patagonia para disfrutar en cualquier época del año." },
-    { nombre: "Cataratas del Iguazú", categoria: "Naturaleza", escena: "cataratas", imagen: "", alt: "",
+    { nombre: "Cataratas del Iguazú", categoria: "Naturaleza", escena: "cataratas", imagen: foto("iguazu"), alt: "Saltos de las Cataratas del Iguazú rodeados de selva",
       descripcion: "Saltos de agua y selva misionera en uno de los paisajes más impactantes del país." },
-    { nombre: "Mendoza", categoria: "Cordillera y viñedos", escena: "vinedos", imagen: "", alt: "",
+    { nombre: "Mendoza", categoria: "Cordillera y viñedos", escena: "vinedos", imagen: foto("mendoza"), alt: "Viñedos de Mendoza con la Cordillera de los Andes de fondo",
       descripcion: "La Cordillera de los Andes, viñedos y caminos de montaña." },
-    { nombre: "Salta y Jujuy", categoria: "Norte argentino", escena: "quebrada", imagen: "", alt: "",
+    { nombre: "Salta y Jujuy", categoria: "Norte argentino", escena: "quebrada", imagen: foto("jujuy"), alt: "Cerros de colores junto al pueblo de Purmamarca, en Jujuy",
       descripcion: "Cerros de colores, quebradas y pueblos con historia." },
-    { nombre: "Córdoba", categoria: "Sierras", escena: "sierras", imagen: "", alt: "",
+    { nombre: "Córdoba", categoria: "Sierras", escena: "sierras", imagen: foto("cordoba"), alt: "Arroyo entre rocas y árboles en La Cumbrecita, Córdoba",
       descripcion: "Sierras, ríos y valles para una escapada cerca de casa." },
-    { nombre: "Mar del Plata", categoria: "Costa atlántica", escena: "playa", imagen: "", alt: "",
+    { nombre: "Mar del Plata", categoria: "Costa atlántica", escena: "playa", imagen: foto("mardelplata"), alt: "Playa y costanera de Mar del Plata en un día soleado",
       descripcion: "Playas, mar y ciudad sobre la costa atlántica." },
-    { nombre: "Buenos Aires", categoria: "Ciudad", escena: "ciudad", imagen: "", alt: "",
+    { nombre: "Buenos Aires", categoria: "Ciudad", escena: "ciudad", imagen: foto("buenosaires"), alt: "Puerto Madero y el Puente de la Mujer en Buenos Aires",
       descripcion: "Barrios, cultura, gastronomía y paseos en la gran ciudad." },
-    { nombre: "Destinos internacionales", categoria: "Internacional", escena: "mundo", imagen: "", alt: "",
+    { nombre: "Destinos internacionales", categoria: "Internacional", escena: "mundo", imagen: foto("internacional"), alt: "Ala de un avión sobre las nubes al atardecer",
       descripcion: "Consultá por propuestas para viajar fuera del país.", mensaje: "Hola, Altamirano Nosiglia. Quisiera recibir información sobre viajes a destinos internacionales." }
   ];
 
@@ -1630,7 +1674,7 @@
     if (!tieneValor(url)) return null;
     try {
       const u = new URL(String(url).trim(), window.location.href);
-      return ["http:", "https:"].includes(u.protocol) ? u.href : null;
+      return ["http:", "https:", "file:"].includes(u.protocol) ? u.href : null;
     } catch (e) { return null; }
   }
 
@@ -2017,16 +2061,22 @@
   }
 
   // Devuelve una foto real (si existe) o la ilustración de referencia.
-  function crearMedia(imagen, escena, alt, eager = false) {
-    const src = urlSegura(imagen);
-    if (src) return `<img src="${escaparHTML(src)}" alt="${escaparHTML(alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+  /* "imagen" puede ser una URL o un objeto { src, srcset, sizes }.
+     Si la foto no carga, se reemplaza automáticamente por la ilustración. */
+  function crearMedia(imagen, escena, alt, eager = false, sizes = "(max-width: 720px) 100vw, 50vw") {
+    const datos = typeof imagen === "object" && imagen ? imagen : { src: imagen };
+    const src = urlSegura(datos.src);
+    if (src) {
+      const srcset = tieneValor(datos.srcset) ? ` srcset="${escaparHTML(datos.srcset)}" sizes="${escaparHTML(datos.sizes || sizes)}"` : "";
+      return `<img src="${escaparHTML(src)}"${srcset} alt="${escaparHTML(alt)}" data-escena="${escaparHTML(escena)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+    }
     return crearEscena(escena, alt);
   }
 
   function renderMedias() {
     $$("[data-media]").forEach((el) => {
       const clave = el.dataset.media;
-      el.insertAdjacentHTML("afterbegin", crearMedia(IMAGENES[clave], el.dataset.escena, el.dataset.alt || "", el.hasAttribute("data-eager")));
+      el.insertAdjacentHTML("afterbegin", crearMedia(IMAGENES[clave], el.dataset.escena, el.dataset.alt || "", el.hasAttribute("data-eager"), el.dataset.sizes));
     });
   }
 
@@ -2054,7 +2104,7 @@
       return `
         <article class="destino revelar${i === 0 ? " destacado" : ""}" style="--d:${(i % 3) * 0.08}s">
           <div class="media">
-            ${crearMedia(d.imagen, d.escena, alt)}
+            ${crearMedia(d.imagen, d.escena, alt, false, i === 0 ? "(max-width: 720px) 100vw, 45vw" : "(max-width: 720px) 100vw, (max-width: 1020px) 50vw, 33vw")}
             ${tieneValor(d.categoria) ? `<span class="destino-cat">${escaparHTML(d.categoria)}</span>` : ""}
           </div>
           <div class="destino-cuerpo">
@@ -2126,10 +2176,21 @@
     });
   }
 
+  function renderCreditos() {
+    if (!CREDITOS.length) return;
+    $("#creditos").hidden = false;
+    $("#creditos-resumen").textContent = "Fotografías de referencia de Wikimedia Commons, con licencias libres (ver créditos).";
+    $("#creditos-lista").innerHTML = CREDITOS.map((c) => {
+      const lic = urlSegura(c.licenciaUrl) ? `<a href="${escaparHTML(urlSegura(c.licenciaUrl))}" target="_blank" rel="noopener noreferrer">${escaparHTML(c.licencia)}</a>` : escaparHTML(c.licencia);
+      const fuente = urlSegura(c.fuente) ? `<a href="${escaparHTML(urlSegura(c.fuente))}" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>` : "Wikimedia Commons";
+      return `<li>${escaparHTML(c.foto)}: ${escaparHTML(c.autor)}, ${lic}, vía ${fuente}${c.cambios ? " (recortada y optimizada)" : ""}.</li>`;
+    }).join("");
+  }
+
   function renderContacto() {
     const items = [];
     const n = numeroWhatsApp();
-    if (n) items.push({ ic: "i-whatsapp", relleno: true, et: "WhatsApp", tx: `+${n}`, wa: "general" });
+    if (n) items.push({ ic: "i-whatsapp", relleno: true, et: "WhatsApp", tx: tieneValor(EMPRESA.whatsappTexto) ? EMPRESA.whatsappTexto : `+${n}`, wa: "general" });
     if (tieneValor(EMPRESA.telefono)) {
       const tel = String(EMPRESA.telefono).replace(/[^\d+]/g, "");
       items.push({ ic: "i-telefono", et: "Teléfono", tx: EMPRESA.telefono, href: tel.length >= 6 ? `tel:${tel}` : null });
@@ -2141,7 +2202,9 @@
     if (ig) items.push({ ic: "i-instagram", et: "Instagram", tx: ig.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""), href: ig, externo: true });
     const fb = urlSegura(EMPRESA.facebook);
     if (fb) items.push({ ic: "i-facebook", et: "Facebook", tx: fb.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""), href: fb, externo: true });
-    if (tieneValor(EMPRESA.direccion)) items.push({ ic: "i-pin", et: "Dirección", tx: EMPRESA.direccion });
+    const mapa = urlSegura(EMPRESA.mapa);
+    if (tieneValor(EMPRESA.direccion)) items.push({ ic: "i-pin", et: "Dirección", tx: EMPRESA.direccion, href: mapa, externo: true });
+    else if (mapa) items.push({ ic: "i-pin", et: "Ubicación", tx: "Ver en Google Maps", href: mapa, externo: true });
     if (tieneValor(EMPRESA.horarios)) items.push({ ic: "i-reloj", et: "Horarios de atención", tx: EMPRESA.horarios });
 
     const lista = $("#contacto-datos");
@@ -2153,6 +2216,13 @@
         if (it.href) return `<li><a class="dato" href="${escaparHTML(it.href)}"${it.externo ? ' target="_blank" rel="noopener noreferrer"' : ""}>${contenido}</a></li>`;
         return `<li><div class="dato">${contenido}</div></li>`;
       }).join("");
+    }
+
+    const embed = urlSegura(EMPRESA.mapaEmbed);
+    if (embed && /^https:\/\/(www\.)?google\.[a-z.]+\/maps/.test(embed)) {
+      const cont = $("#contacto-mapa");
+      cont.hidden = false;
+      cont.innerHTML = `<iframe src="${escaparHTML(embed)}" title="Ubicación de ${escaparHTML(EMPRESA.nombre)} en Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>`;
     }
 
     // Footer: datos adicionales (el acceso a WhatsApp ya está en el HTML)
@@ -2490,7 +2560,13 @@
     renderProximos();
     renderOpciones();
     renderContacto();
+    renderCreditos();
     conectarWhatsApp();
+    // Si una foto no carga, se muestra la ilustración de referencia.
+    document.addEventListener("error", (e) => {
+      const img = e.target;
+      if (img && img.tagName === "IMG" && img.dataset.escena) img.outerHTML = crearEscena(img.dataset.escena, img.alt);
+    }, true);
     document.addEventListener("click", avisoPendiente);
     document.addEventListener("keydown", avisoPendiente);
 

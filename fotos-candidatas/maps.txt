@@ -1,3 +1,0 @@
-final=https://www.google.com/maps/place/Boleteria+ALTAMIRANO+NOSIGLIA,+Lavalle+s%2Fn,+Mariano+I.+Loza,+Corrientes/data=!4m2!3m1!1s0x945273ab03e6e131:0xb024704c44cb8f9e!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjQwLjAYACDXggMqxwEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc2MSwxMDA3OTY1MzUsOTQyODA1NzYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsOTQyNzk2MTksMTAwODM1NzA0LDEwMDgyNTAyNSwxMDA4MjAyMzcsMTAwODIyNDk0LDEwMDgyNzk3NSwxMDA4MzgzNTksMTIxODE2NDYxQgJBUg%3D%3D&skid=3b21ac49-6641-4a44-a64a-a456b3769eef
-titulo=('Google Maps', None)
-desc=('Find local businesses, view maps and get driving directions in Google Maps.', None)
