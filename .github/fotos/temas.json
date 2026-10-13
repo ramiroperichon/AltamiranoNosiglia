@@ -1,0 +1,14 @@
+{
+ "bariloche": ["Nahuel Huapi lake", "Llao Llao Bariloche", "Lago Gutiérrez", "Bariloche"],
+ "iguazu": ["Iguazu Falls", "Garganta del Diablo Iguazú", "Cataratas del Iguazú"],
+ "mendoza": ["Mendoza vineyard", "Aconcagua", "Potrerillos Mendoza", "Mendoza Argentina mountains"],
+ "norte": ["Purmamarca", "Quebrada de Humahuaca", "Salinas Grandes Jujuy", "Cafayate Salta"],
+ "cordoba": ["Sierras de Córdoba", "Traslasierra", "Los Gigantes Córdoba", "Córdoba Argentina sierras"],
+ "mardelplata": ["Mar del Plata", "Mar del Plata beach", "Mar del Plata playa"],
+ "buenosaires": ["Puerto Madero", "Buenos Aires skyline", "Buenos Aires night"],
+ "internacional": ["airplane wing clouds", "Machu Picchu", "Rio de Janeiro Pão de Açúcar"],
+ "invierno": ["Cerro Catedral", "Chapelco snow", "Patagonia snow mountains", "Andes snow Argentina"],
+ "verano": ["Las Grutas Río Negro", "Cariló beach", "Argentina beach summer", "Playa Argentina"],
+ "escapadas": ["Tilcara", "Tandil", "Villa La Angostura", "San Antonio de Areco"],
+ "ruta": ["Ruta 40 Argentina", "Ruta Nacional 40", "Patagonia road"]
+}
