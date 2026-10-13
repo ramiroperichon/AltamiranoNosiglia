@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Altamirano Nosiglia | Viajes, Turismo y Pasajes</title>
+  <meta name="description" content="Altamirano Nosiglia: viajes turísticos, escapadas y propuestas para las vacaciones de invierno y verano, y consultas por pasajes de colectivos de línea. Escribinos por WhatsApp y empezá a organizar tu próximo viaje.">
+  <meta name="theme-color" content="#15334A">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Altamirano Nosiglia | Viajes, Turismo y Pasajes">
+  <meta property="og:description" content="Viajes turísticos, escapadas, propuestas de invierno y verano y consultas por pasajes de colectivos de línea.">
+  <!-- Cuando exista el dominio real, agregar: <link rel="canonical" href="https://DOMINIO/"> y <meta property="og:url" ...> / <meta property="og:image" ...> -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%2315334A'/%3E%3Ccircle cx='27' cy='13' r='4' fill='%23E7A64B'/%3E%3Cpath d='M7 30 17 14l6 9 3-4 7 11Z' fill='%23DCECF2'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       TOKENS
+       ========================================================= */
+    :root {
+      --azul-profundo: #15334A;
+      --azul-secundario: #245A73;
+      --celeste: #DCECF2;
+      --blanco: #FFFFFF;
+      --gris: #F5F7F8;
+      --arena: #E9DDC7;
+      --acento: #E7A64B;
+      --texto: #172A36;
+      --texto-sec: #657580;
+
+      --acento-hover: #EDB869;
+      --texto-sec-alt: #56666F;   /* para fondos gris/celeste/arena (contraste AA) */
+      --azul-noche: #0F2738;
+      --linea: rgba(21, 51, 74, .12);
+      --wa: #25D366;
+
+      --fuente-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      --fuente-texto: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+      --radio-sm: 10px;
+      --radio: 16px;
+      --radio-lg: 24px;
+      --sombra-sm: 0 2px 6px rgba(21, 51, 74, .06), 0 8px 24px -12px rgba(21, 51, 74, .18);
+      --sombra: 0 4px 12px rgba(21, 51, 74, .06), 0 24px 48px -24px rgba(21, 51, 74, .32);
+
+      --gutter: clamp(16px, 4vw, 40px);
+      --max: 1200px;
+      --header-h: 76px;
+      --seccion: clamp(72px, 10vw, 128px);
+      --ease: cubic-bezier(.22, .7, .25, 1);
+    }
+
+    /* =========================================================
+       BASE
+       ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 8px); -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--blanco);
+      color: var(--texto);
+      font-family: var(--fuente-texto);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    @supports (overflow: clip) { body { overflow-x: clip; } }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    h1, h2, h3, h4 { margin: 0; font-family: var(--fuente-display); font-weight: 600; line-height: 1.1; letter-spacing: -.015em; text-wrap: balance; color: var(--azul-profundo); font-optical-sizing: auto; }
+    p { margin: 0; text-wrap: pretty; }
+    ul { margin: 0; padding: 0; list-style: none; }
+
+    :focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; border-radius: 6px; }
+
+    .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .saltar { position: absolute; left: 16px; top: -100px; z-index: 200; background: var(--azul-profundo); color: #fff; padding: .75rem 1.1rem; border-radius: var(--radio-sm); text-decoration: none; font-weight: 700; }
+    .saltar:focus { top: 12px; }
+
+    .contenedor { width: 100%; max-width: calc(var(--max) + var(--gutter) * 2); margin-inline: auto; padding-inline: var(--gutter); }
+    .seccion { padding-block: var(--seccion); position: relative; }
+    .fondo-gris { background: var(--gris); }
+    .fondo-celeste { background: var(--celeste); }
+    .fondo-arena { background: var(--arena); }
+    .fondo-gris p, .fondo-celeste p, .fondo-arena p { color: var(--texto-sec-alt); }
+
+    .icono { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .icono-relleno { fill: currentColor; stroke: none; }
+
+    /* Antetítulo / encabezados de sección */
+    .antetitulo {
+      display: inline-flex; align-items: center; gap: .7rem;
+      font-family: var(--fuente-texto); font-size: .78rem; font-weight: 800;
+      letter-spacing: .18em; text-transform: uppercase; color: var(--azul-secundario);
+      margin-bottom: 1rem;
+    }
+    .antetitulo::before { content: ""; width: 28px; height: 2px; background: var(--acento); border-radius: 2px; }
+    .encabezado { max-width: 720px; margin-bottom: clamp(36px, 5vw, 64px); }
+    .encabezado.centrado { margin-inline: auto; text-align: center; }
+    .encabezado.centrado .antetitulo { justify-content: center; }
+    .encabezado h2, .titulo-2 { font-size: clamp(2rem, 1.35rem + 2.6vw, 3.25rem); }
+    .encabezado p { margin-top: 1rem; font-size: clamp(1.05rem, 1rem + .3vw, 1.2rem); color: var(--texto-sec); }
+    .encabezado em, .titulo-2 em, h1 em { font-style: italic; font-weight: 500; }
+
+    /* Botones */
+    .btn {
+      --b-bg: var(--azul-profundo); --b-tx: #fff; --b-bd: transparent;
+      display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+      min-height: 52px; padding: .8rem 1.6rem;
+      border-radius: 999px; border: 2px solid var(--b-bd);
+      background: var(--b-bg); color: var(--b-tx);
+      font-family: var(--fuente-texto); font-weight: 800; font-size: .84rem; letter-spacing: .08em; text-transform: uppercase;
+      text-decoration: none; line-height: 1.2; text-align: center; cursor: pointer;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background-color .25s, color .25s, border-color .25s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -12px rgba(21, 51, 74, .55); }
+    .btn:active { transform: translateY(0); }
+    .btn .icono { width: 1.15rem; height: 1.15rem; }
+    .btn-primario { --b-bg: var(--acento); --b-tx: var(--texto); }
+    .btn-primario:hover { --b-bg: var(--acento-hover); }
+    .btn-oscuro { --b-bg: var(--azul-profundo); --b-tx: #fff; }
+    .btn-oscuro:hover { --b-bg: var(--azul-secundario); }
+    .btn-claro { --b-bg: transparent; --b-tx: #fff; --b-bd: rgba(255, 255, 255, .7); }
+    .btn-claro:hover { --b-bg: #fff; --b-tx: var(--azul-profundo); --b-bd: #fff; }
+    .btn-contorno { --b-bg: transparent; --b-tx: var(--azul-profundo); --b-bd: var(--azul-profundo); }
+    .btn-contorno:hover { --b-bg: var(--azul-profundo); --b-tx: #fff; }
+    .btn-bloque { width: 100%; }
+    [aria-disabled="true"].btn, [data-wa-pendiente] { cursor: help; }
+
+    .enlace-flecha { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; text-decoration: none; color: var(--azul-secundario); }
+    .enlace-flecha .icono { transition: transform .25s var(--ease); }
+    .enlace-flecha:hover .icono { transform: translateX(4px); }
+
+    /* Etiquetas */
+    .etiquetas { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .etiqueta {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .42rem .85rem; border-radius: 999px;
+      background: var(--celeste); color: var(--azul-profundo);
+      font-size: .86rem; font-weight: 600; line-height: 1.3;
+    }
+    .etiqueta .icono { width: 1rem; height: 1rem; color: var(--azul-secundario); }
+
+    /* Ilustraciones / fotos */
+    .media { position: relative; overflow: hidden; background: var(--celeste); }
+    .media > svg, .media > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .media img { transition: transform .8s var(--ease); }
+
+    /* =========================================================
+       HEADER / NAVEGACIÓN
+       ========================================================= */
+    .header {
+      position: fixed; inset: 0 0 auto 0; z-index: 100;
+      height: var(--header-h);
+      color: #fff;
+      transition: background-color .35s var(--ease), box-shadow .35s var(--ease), color .35s var(--ease);
+    }
+    .header.solido, .header.menu-abierto { background: rgba(255, 255, 255, .97); color: var(--azul-profundo); box-shadow: 0 1px 0 var(--linea), 0 10px 30px -20px rgba(21, 51, 74, .4); }
+    @supports (backdrop-filter: blur(8px)) {
+      .header.solido { background: rgba(255, 255, 255, .88); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); }
+    }
+    .header .contenedor { max-width: calc(1320px + var(--gutter) * 2); height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .marca { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; color: inherit; min-width: 0; }
+    .marca-simbolo { width: 42px; height: 42px; flex: none; }
+    .marca-simbolo rect { stroke: rgba(255, 255, 255, .35); }
+    .header.solido .marca-simbolo rect, .header.menu-abierto .marca-simbolo rect { stroke: transparent; }
+    .marca-logo { height: 44px; width: auto; }
+    .marca-texto { display: flex; flex-direction: column; line-height: 1.05; }
+    .marca-nombre { font-family: var(--fuente-display); font-weight: 650; font-size: 1.12rem; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+    .marca-sub { font-size: .66rem; font-weight: 700; letter-spacing: .26em; text-transform: uppercase; opacity: .78; margin-top: .3rem; }
+
+    .nav { display: flex; align-items: center; }
+    .nav-lista { display: flex; align-items: center; gap: .15rem; }
+    .nav-lista a {
+      position: relative; display: block; padding: .5rem .5rem;
+      font-size: .86rem; font-weight: 600; text-decoration: none; color: inherit; white-space: nowrap;
+      border-radius: 8px;
+    }
+    .nav-lista a::after {
+      content: ""; position: absolute; left: .5rem; right: .5rem; bottom: .25rem; height: 2px;
+      background: var(--acento); border-radius: 2px; transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease);
+    }
+    .nav-lista a:hover::after, .nav-lista a.activo::after { transform: scaleX(1); }
+    .nav-cta { margin-left: .75rem; min-height: 44px; padding: .6rem 1.05rem; font-size: .72rem; white-space: nowrap; }
+    .nav-toggle {
+      display: none; align-items: center; justify-content: center; gap: .5rem;
+      min-width: 48px; height: 48px; padding: 0 .9rem; border-radius: 999px;
+      background: transparent; border: 1.5px solid currentColor; color: inherit; cursor: pointer;
+      font-weight: 700; font-size: .85rem;
+    }
+    .nav-toggle .icono { width: 1.35rem; height: 1.35rem; }
+    .nav-toggle .i-cerrar { display: none; }
+    .nav-toggle[aria-expanded="true"] .i-abrir { display: none; }
+    .nav-toggle[aria-expanded="true"] .i-cerrar { display: block; }
+
+    @media (max-width: 1339px) {
+      .nav-toggle { display: inline-flex; }
+      .nav {
+        display: block;
+        position: absolute; top: var(--header-h); left: 0; right: 0;
+        background: #fff; color: var(--azul-profundo);
+        border-top: 1px solid var(--linea);
+        box-shadow: 0 24px 40px -24px rgba(21, 51, 74, .45);
+        max-height: calc(100vh - var(--header-h)); max-height: calc(100dvh - var(--header-h)); overflow-y: auto;
+        padding: .75rem var(--gutter) calc(1.5rem + env(safe-area-inset-bottom));
+        opacity: 0; visibility: hidden; transform: translateY(-8px);
+        transition: opacity .25s var(--ease), transform .25s var(--ease), visibility 0s linear .25s;
+      }
+      .nav.abierto { opacity: 1; visibility: visible; transform: none; transition: opacity .25s var(--ease), transform .25s var(--ease); }
+      .nav-lista { flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-lista a { padding: .95rem .25rem; font-size: 1.05rem; border-bottom: 1px solid var(--linea); border-radius: 0; }
+      .nav-lista a::after { display: none; }
+      .nav-lista a.activo { color: var(--azul-secundario); }
+      .nav-cta { margin: 1.25rem 0 0; width: 100%; min-height: 52px; font-size: .84rem; white-space: normal; }
+    }
+    @media (max-width: 420px) {
+      .marca-nombre { font-size: .98rem; letter-spacing: .04em; }
+      .marca-simbolo { width: 38px; height: 38px; }
+      .nav-toggle .txt { display: none; }
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+    .hero {
+      position: relative; isolation: isolate;
+      min-height: max(640px, min(100vh, 940px));
+      min-height: max(640px, min(100svh, 940px));
+      display: flex; align-items: center;
+      padding: calc(var(--header-h) + 48px) 0 110px;
+      color: #fff; overflow: hidden;
+      background: var(--azul-profundo);
+    }
+    .hero-media { position: absolute; inset: 0; z-index: -2; background: linear-gradient(#6FA3BF, #F5D9AE); }
+    .hero-media::after {
+      content: ""; position: absolute; inset: 0;
+      background:
+        linear-gradient(90deg, rgba(15, 39, 56, .86) 0%, rgba(15, 39, 56, .62) 38%, rgba(15, 39, 56, .12) 78%),
+        linear-gradient(0deg, rgba(15, 39, 56, .55) 0%, rgba(15, 39, 56, 0) 35%);
+    }
+    .hero-contenido { max-width: 680px; }
+    .hero .antetitulo { color: var(--arena); }
+    .hero h1 { color: #fff; font-size: clamp(2.6rem, 1.5rem + 4.6vw, 5.1rem); line-height: 1.02; letter-spacing: -.025em; }
+    .hero h1 em { color: var(--acento); }
+    .hero-texto { margin-top: 1.5rem; max-width: 34rem; font-size: clamp(1.08rem, 1rem + .45vw, 1.3rem); color: rgba(255, 255, 255, .9); }
+    .hero-acciones { margin-top: 2.25rem; display: flex; flex-wrap: wrap; gap: .85rem; }
+    .hero-wa {
+      margin-top: 1.4rem; display: inline-flex; align-items: center; gap: .55rem;
+      color: rgba(255, 255, 255, .92); font-weight: 600; font-size: .98rem; text-decoration: none;
+      padding: .35rem 0; border-bottom: 1px solid rgba(255, 255, 255, .35);
+      transition: border-color .25s, color .25s;
+    }
+    .hero-wa:hover { color: #fff; border-color: var(--acento); }
+    .hero-wa .icono { width: 1.2rem; height: 1.2rem; color: var(--wa); }
+    .hero-pie {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      border-top: 1px solid rgba(255, 255, 255, .18);
+    }
+    .hero-pie .contenedor { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 72px; }
+    .hero-servicios { display: flex; flex-wrap: wrap; gap: .5rem 2rem; font-size: .9rem; font-weight: 600; color: rgba(255, 255, 255, .85); }
+    .hero-servicios span { display: inline-flex; align-items: center; gap: .5rem; }
+    .hero-servicios .icono { color: var(--acento); }
+    .hero-scroll { display: inline-flex; align-items: center; gap: .6rem; color: rgba(255, 255, 255, .8); text-decoration: none; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .hero-scroll .linea { width: 1px; height: 30px; background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,0)); }
+    @media (max-width: 700px) {
+      .hero { padding-bottom: 96px; align-items: flex-end; }
+      .hero-media::after {
+        background: linear-gradient(0deg, rgba(15, 39, 56, .92) 0%, rgba(15, 39, 56, .72) 45%, rgba(15, 39, 56, .25) 100%);
+      }
+      .hero-acciones .btn { flex: 1 1 100%; }
+      .hero-scroll { display: none; }
+      .hero-servicios { font-size: .82rem; gap: .4rem 1.25rem; }
+    }
+
+    /* =========================================================
+       SERVICIOS (acceso rápido)
+       ========================================================= */
+    .servicios-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 36px); }
+    .servicio {
+      position: relative; display: flex; flex-direction: column;
+      background: #fff; border-radius: var(--radio-lg); overflow: hidden;
+      box-shadow: var(--sombra); border: 1px solid var(--linea);
+      transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+    }
+    .servicio:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(21,51,74,.08), 0 36px 60px -30px rgba(21,51,74,.45); }
+    .servicio .media { aspect-ratio: 16 / 10; }
+    .servicio:hover .media img { transform: scale(1.03); }
+    .servicio-num {
+      position: absolute; top: 18px; left: 18px; z-index: 1;
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .45rem .9rem; border-radius: 999px;
+      background: rgba(255, 255, 255, .94); color: var(--azul-profundo);
+      font-size: .74rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+    }
+    .servicio-num .icono { width: 1rem; height: 1rem; color: var(--azul-secundario); }
+    .servicio-cuerpo { display: flex; flex-direction: column; gap: 1.1rem; flex: 1; padding: clamp(24px, 3.2vw, 40px); }
+    .servicio h3 { font-size: clamp(1.6rem, 1.3rem + 1vw, 2.1rem); }
+    .servicio p { color: var(--texto-sec); }
+    .servicio .btn { align-self: flex-start; margin-top: auto; }
+    .servicio.pasajes { background: var(--azul-profundo); border-color: transparent; }
+    .servicio.pasajes h3 { color: #fff; }
+    .servicio.pasajes p { color: rgba(255, 255, 255, .82); }
+    .servicio.pasajes .etiqueta { background: rgba(255, 255, 255, .1); color: #fff; }
+    .servicio.pasajes .etiqueta .icono { color: var(--acento); }
+    @media (max-width: 820px) { .servicios-grid { grid-template-columns: 1fr; } }
+
+    /* =========================================================
+       NOSOTROS
+       ========================================================= */
+    .nosotros-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px, 7vw, 100px); align-items: center; }
+    .nosotros-visual { position: relative; padding: 0 0 36px 36px; }
+    .nosotros-visual::before {
+      content: ""; position: absolute; left: 0; bottom: 0; width: 72%; height: 78%;
+      background: var(--arena); border-radius: var(--radio-lg);
+    }
+    .nosotros-visual .media { position: relative; aspect-ratio: 4 / 5; border-radius: var(--radio-lg); box-shadow: var(--sombra); }
+    .nosotros-sello {
+      position: absolute; right: -14px; bottom: 70px; z-index: 2;
+      background: #fff; border-radius: var(--radio); box-shadow: var(--sombra);
+      padding: 1rem 1.2rem; display: flex; flex-direction: column; gap: .55rem; max-width: 240px;
+    }
+    .nosotros-sello span { display: flex; align-items: center; gap: .6rem; font-weight: 700; font-size: .92rem; color: var(--azul-profundo); }
+    .nosotros-sello .icono { color: var(--acento); }
+    .nosotros-texto h2 { margin-bottom: 1.5rem; }
+    .nosotros-texto p + p { margin-top: 1.1rem; }
+    .nosotros-texto p { color: var(--texto-sec); font-size: 1.08rem; }
+    .nosotros-texto .btn { margin-top: 2rem; }
+    @media (max-width: 900px) {
+      .nosotros-grid { grid-template-columns: 1fr; }
+      .nosotros-visual { max-width: 520px; padding: 0 0 24px 24px; }
+      .nosotros-visual .media { aspect-ratio: 5 / 4; }
+      .nosotros-sello { right: 12px; bottom: 44px; }
+    }
+
+    /* =========================================================
+       PRÓXIMOS VIAJES
+       ========================================================= */
+    .proximos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 28px; }
+    .viaje {
+      display: flex; flex-direction: column; background: #fff; border-radius: var(--radio-lg); overflow: hidden;
+      box-shadow: var(--sombra-sm); border: 1px solid var(--linea);
+    }
+    .viaje .media { aspect-ratio: 16 / 10; }
+    .viaje-cuerpo { padding: 1.5rem; display: flex; flex-direction: column; gap: .9rem; flex: 1; }
+    .viaje h3 { font-size: 1.5rem; }
+    .viaje-estado { align-self: flex-start; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: .35rem .7rem; border-radius: 999px; background: var(--arena); color: var(--azul-profundo); }
+    .viaje-datos { display: grid; gap: .5rem; font-size: .95rem; }
+    .viaje-datos li { display: flex; gap: .6rem; align-items: flex-start; }
+    .viaje-datos .icono { color: var(--azul-secundario); margin-top: .2rem; }
+    .viaje-precio { font-family: var(--fuente-display); font-size: 1.4rem; color: var(--azul-profundo); }
+    .viaje .btn { margin-top: auto; }
+
+    .vacio {
+      position: relative; overflow: hidden;
+      display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: clamp(24px, 4vw, 56px);
+      background: #fff; border-radius: var(--radio-lg); box-shadow: var(--sombra-sm); border: 1px solid var(--linea);
+      padding: clamp(28px, 4.5vw, 56px);
+    }
+    .vacio::before {
+      content: ""; position: absolute; inset: auto -60px -120px auto; width: 320px; height: 320px; border-radius: 50%;
+      border: 2px dashed rgba(36, 90, 115, .18);
+    }
+    .vacio-icono {
+      width: 96px; height: 96px; border-radius: 28px; display: grid; place-items: center;
+      background: var(--celeste); color: var(--azul-profundo);
+    }
+    .vacio-icono .icono { width: 44px; height: 44px; stroke-width: 1.5; }
+    .vacio h3 { font-size: clamp(1.4rem, 1.2rem + .8vw, 1.8rem); margin-bottom: .6rem; }
+    .vacio p { color: var(--texto-sec); max-width: 40rem; }
+    .vacio .btn { position: relative; }
+    @media (max-width: 860px) { .vacio { grid-template-columns: 1fr; } .vacio .btn { justify-self: start; } }
+
+    /* =========================================================
+       DESTINOS
+       ========================================================= */
+    .destinos-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .destino {
+      position: relative; display: flex; flex-direction: column;
+      background: #fff; border-radius: var(--radio-lg); overflow: hidden;
+      border: 1px solid var(--linea); box-shadow: var(--sombra-sm);
+      transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+    }
+    .destino:hover { transform: translateY(-4px); box-shadow: var(--sombra); }
+    .destino .media { aspect-ratio: 4 / 3; }
+    .destino:hover .media img { transform: scale(1.04); }
+    .destino-cat {
+      position: absolute; top: 14px; left: 14px; z-index: 1;
+      padding: .38rem .8rem; border-radius: 999px; background: rgba(255, 255, 255, .94);
+      color: var(--azul-profundo); font-size: .74rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+    }
+    .destino-cuerpo { padding: 1.35rem 1.4rem 1.5rem; display: flex; flex-direction: column; gap: .65rem; flex: 1; }
+    .destino h3 { font-size: 1.45rem; }
+    .destino p { color: var(--texto-sec); font-size: .98rem; }
+    .destino .btn { margin-top: auto; align-self: flex-start; min-height: 46px; padding: .7rem 1.2rem; font-size: .76rem; }
+    .destino-pie { margin-top: .6rem; padding-top: 1rem; }
+
+    /* Tarjeta destacada (primera) */
+    .destino.destacado { grid-column: span 2; flex-direction: row; }
+    .destino.destacado .media { aspect-ratio: auto; flex: 1.25; min-height: 360px; }
+    .destino.destacado .destino-cuerpo { flex: 1; padding: clamp(24px, 3vw, 40px); justify-content: center; }
+    .destino.destacado h3 { font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.4rem); }
+    .destino.destacado p { font-size: 1.05rem; }
+
+    .destinos-nota { margin-top: 2rem; display: flex; align-items: center; gap: .75rem; color: var(--texto-sec-alt); font-size: .95rem; }
+    .destinos-nota .icono { color: var(--azul-secundario); }
+
+    @media (max-width: 1020px) {
+      .destinos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .destinos-grid { grid-template-columns: 1fr; }
+      .destino.destacado { grid-column: auto; flex-direction: column; }
+      .destino.destacado .media { aspect-ratio: 4 / 3; min-height: 0; flex: none; }
+    }
+
+    /* =========================================================
+       TEMPORADAS
+       ========================================================= */
+    .temporadas { background: var(--azul-profundo); color: #fff; overflow: hidden; }
+    .temporadas::before {
+      content: ""; position: absolute; top: -220px; right: -180px; width: 560px; height: 560px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(231, 166, 75, .16), rgba(231, 166, 75, 0) 70%);
+      pointer-events: none;
+    }
+    .temporadas .antetitulo { color: var(--arena); }
+    .temporadas .encabezado h2 { color: #fff; }
+    .temporadas .encabezado p { color: rgba(255, 255, 255, .8); }
+    .temporadas-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 2.6vw, 32px); align-items: start; }
+    .temporada { display: flex; flex-direction: column; border-radius: var(--radio-lg); overflow: hidden; background: rgba(255, 255, 255, .05); border: 1px solid rgba(255, 255, 255, .12); height: 100%; }
+    .temporada:nth-child(2) { margin-top: 56px; }
+    .temporada .media { aspect-ratio: 4 / 4.3; }
+    .temporada-cuerpo { padding: 1.6rem 1.6rem 1.8rem; display: flex; flex-direction: column; gap: .8rem; flex: 1; }
+    .temporada-tag { display: inline-flex; align-items: center; gap: .5rem; color: var(--acento); font-size: .76rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .temporada h3 { color: #fff; font-size: clamp(1.5rem, 1.25rem + .8vw, 1.9rem); }
+    .temporada p { color: rgba(255, 255, 255, .8); }
+    .temporada .btn { margin-top: auto; align-self: flex-start; min-height: 48px; font-size: .76rem; padding: .75rem 1.25rem; }
+    @media (max-width: 960px) {
+      .temporadas-grid { grid-template-columns: 1fr 1fr; }
+      .temporada:nth-child(2) { margin-top: 0; }
+      .temporada:nth-child(3) { grid-column: 1 / -1; flex-direction: row; }
+      .temporada:nth-child(3) .media { aspect-ratio: auto; flex: 1; min-height: 280px; }
+      .temporada:nth-child(3) .temporada-cuerpo { flex: 1; justify-content: center; }
+    }
+    @media (max-width: 640px) {
+      .temporadas-grid { grid-template-columns: 1fr; }
+      .temporada:nth-child(3) { flex-direction: column; }
+      .temporada:nth-child(3) .media { aspect-ratio: 16 / 11; min-height: 0; flex: none; }
+      .temporada .media { aspect-ratio: 16 / 11; }
+    }
+
+    /* =========================================================
+       POR QUÉ ELEGIRNOS
+       ========================================================= */
+    .porque-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(36px, 6vw, 88px); align-items: start; }
+    .porque-intro { position: sticky; top: calc(var(--header-h) + 32px); }
+    .porque-intro p { margin-top: 1.1rem; font-size: 1.1rem; }
+    .porque-intro .btn { margin-top: 2rem; }
+    .porque-lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; counter-reset: pq; }
+    .beneficio {
+      background: #fff; border-radius: var(--radio-lg); padding: clamp(24px, 3vw, 34px);
+      box-shadow: var(--sombra-sm); position: relative; counter-increment: pq;
+    }
+    .beneficio:nth-child(even) { transform: translateY(32px); }
+    .beneficio-icono { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; background: var(--azul-profundo); color: var(--acento); margin-bottom: 1.3rem; }
+    .beneficio-icono .icono { width: 26px; height: 26px; }
+    .beneficio::after {
+      content: "0" counter(pq); position: absolute; top: 22px; right: 26px;
+      font-family: var(--fuente-display); font-size: 1rem; color: rgba(21, 51, 74, .3); font-weight: 600;
+    }
+    .beneficio h3 { font-family: var(--fuente-texto); font-size: .92rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; line-height: 1.35; margin-bottom: .65rem; }
+    .fondo-celeste .beneficio p { color: var(--texto-sec); font-size: .99rem; }
+    @media (max-width: 900px) {
+      .porque-grid { grid-template-columns: 1fr; }
+      .porque-intro { position: static; }
+    }
+    @media (max-width: 560px) {
+      .porque-lista { grid-template-columns: 1fr; }
+      .beneficio:nth-child(even) { transform: none; }
+    }
+
+    /* =========================================================
+       FORMULARIOS (comunes)
+       ========================================================= */
+    .form-card { background: #fff; border-radius: var(--radio-lg); box-shadow: var(--sombra); border: 1px solid var(--linea); padding: clamp(24px, 4vw, 48px); }
+    .form-card h3 { font-size: clamp(1.6rem, 1.3rem + 1vw, 2.15rem); }
+    .form-card .form-sub { margin-top: .6rem; color: var(--texto-sec); }
+    .form { margin-top: 1.8rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.15rem 1.25rem; }
+    .campo { display: flex; flex-direction: column; gap: .45rem; min-width: 0; }
+    .campo.completo { grid-column: 1 / -1; }
+    .campo label, .campo legend { font-size: .9rem; font-weight: 700; color: var(--azul-profundo); padding: 0; }
+    .req { color: #A2531C; margin-left: .15rem; }
+    .opcional { font-weight: 500; color: var(--texto-sec); font-size: .85rem; }
+    .control {
+      width: 100%; min-height: 52px; padding: .8rem 1rem;
+      border: 1.5px solid #C9D4DA; border-radius: 12px; background: #fff;
+      font-size: 1rem; line-height: 1.4; color: var(--texto);
+      transition: border-color .2s, box-shadow .2s, background-color .2s;
+      -webkit-appearance: none; appearance: none;
+    }
+    .control::placeholder { color: #8A979F; }
+    .control:hover { border-color: #9FB0BA; }
+    .control:focus { outline: none; border-color: var(--azul-secundario); box-shadow: 0 0 0 4px rgba(36, 90, 115, .16); }
+    select.control {
+      padding-right: 2.75rem; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23245A73' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.1rem;
+    }
+    textarea.control { min-height: 112px; resize: vertical; }
+    input[type="date"].control { min-height: 52px; }
+    .control[aria-invalid="true"] { border-color: #B3261E; background: #FFF8F7; }
+    .control[aria-invalid="true"]:focus { box-shadow: 0 0 0 4px rgba(179, 38, 30, .15); }
+    .error { display: none; align-items: flex-start; gap: .4rem; font-size: .86rem; font-weight: 600; color: #B3261E; }
+    .error:not(:empty) { display: flex; }
+    .error::before { content: "!"; flex: none; width: 1.1rem; height: 1.1rem; border-radius: 50%; background: #B3261E; color: #fff; font-size: .72rem; display: grid; place-items: center; margin-top: .15rem; }
+    .ayuda { font-size: .84rem; color: var(--texto-sec); }
+
+    fieldset.campo { border: 0; margin: 0; padding: 0; }
+    .segmento { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; padding: .3rem; background: var(--gris); border-radius: 14px; border: 1.5px solid #DCE4E8; }
+    .segmento input { position: absolute; opacity: 0; pointer-events: none; }
+    .segmento label {
+      display: flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px; padding: .5rem; border-radius: 10px;
+      font-weight: 700; font-size: .92rem; color: var(--texto-sec-alt); cursor: pointer; text-align: center;
+      transition: background-color .2s, color .2s, box-shadow .2s;
+    }
+    .segmento input:checked + label { background: #fff; color: var(--azul-profundo); box-shadow: 0 2px 8px rgba(21, 51, 74, .14); }
+    .segmento input:focus-visible + label { outline: 3px solid var(--acento); outline-offset: 2px; }
+
+    .campo-regreso[hidden] { display: none; }
+    .campo-regreso:not([hidden]) { animation: aparecer .35s var(--ease); }
+    @keyframes aparecer { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+    .form-acciones { grid-column: 1 / -1; display: flex; flex-direction: column; gap: .9rem; margin-top: .4rem; }
+    .form-resumen-error { display: none; padding: .85rem 1rem; border-radius: 12px; background: #FDECEA; color: #8C1D18; font-weight: 600; font-size: .92rem; }
+    .form-resumen-error:not(:empty) { display: block; }
+    .form-legal { font-size: .84rem; color: var(--texto-sec); display: flex; gap: .5rem; align-items: flex-start; }
+    .form-legal .icono { color: var(--azul-secundario); margin-top: .15rem; width: 1rem; height: 1rem; }
+
+    .form-resultado { grid-column: 1 / -1; border-radius: 16px; padding: 1.25rem; background: var(--celeste); color: var(--texto); display: grid; gap: .85rem; }
+    .form-resultado[hidden] { display: none; }
+    .form-resultado h4 { font-family: var(--fuente-texto); font-size: 1rem; font-weight: 800; color: var(--azul-profundo); display: flex; align-items: center; gap: .55rem; }
+    .form-resultado p { font-size: .95rem; color: var(--texto-sec-alt); }
+    .form-resultado.pendiente { background: #FBF1E1; }
+    .mensaje-preview { margin: 0; white-space: pre-wrap; word-break: break-word; font-family: var(--fuente-texto); font-size: .9rem; line-height: 1.5; background: #fff; border-radius: 12px; padding: 1rem; border: 1px solid var(--linea); max-height: 260px; overflow: auto; }
+    .form-resultado details summary { cursor: pointer; font-weight: 700; font-size: .9rem; color: var(--azul-secundario); }
+    .form-resultado details[open] summary { margin-bottom: .6rem; }
+
+    @media (max-width: 640px) {
+      .form { grid-template-columns: 1fr; }
+    }
+
+    /* =========================================================
+       CONSULTA TURÍSTICA
+       ========================================================= */
+    .consulta-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
+    .consulta-visual .media { aspect-ratio: 5 / 4; border-radius: var(--radio-lg); box-shadow: var(--sombra-sm); margin-top: 2rem; }
+    .pasos { margin-top: 2rem; display: grid; gap: 1rem; }
+    .paso { display: grid; grid-template-columns: 44px 1fr; gap: 1rem; align-items: start; }
+    .paso-num { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid var(--azul-profundo); font-family: var(--fuente-display); font-weight: 600; color: var(--azul-profundo); }
+    .paso strong { display: block; color: var(--azul-profundo); }
+    .paso span { color: var(--texto-sec); font-size: .96rem; }
+    @media (max-width: 960px) { .consulta-grid { grid-template-columns: 1fr; } .consulta-visual .media { display: none; } }
+
+    /* =========================================================
+       PASAJES
+       ========================================================= */
+    .pasajes {
+      background: var(--azul-noche); color: #fff; overflow: hidden;
+      background-image:
+        radial-gradient(1200px 500px at 85% -10%, rgba(36, 90, 115, .55), rgba(36, 90, 115, 0) 70%),
+        linear-gradient(180deg, #0F2738 0%, #15334A 100%);
+    }
+    .pasajes::after {
+      /* línea de ruta discontinua decorativa */
+      content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px;
+      background: repeating-linear-gradient(90deg, var(--acento) 0 36px, transparent 36px 64px);
+      opacity: .9;
+    }
+    .pasajes .antetitulo { color: var(--acento); }
+    .pasajes-intro { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+    .pasajes-intro h2 { color: #fff; }
+    .pasajes-intro p { color: rgba(255, 255, 255, .82); font-size: 1.08rem; }
+    .pasajes-intro p + p { margin-top: 1rem; }
+    .pasajes-intro .btn { margin-top: 2rem; }
+    .pasajes-visual { position: relative; }
+    .pasajes-visual .media { aspect-ratio: 4 / 3; border-radius: var(--radio-lg); box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .7); background: #0F2738; }
+    .pasajes-visual::before {
+      content: ""; position: absolute; inset: 24px -18px -18px 24px; border-radius: var(--radio-lg);
+      border: 1.5px dashed rgba(231, 166, 75, .45);
+    }
+    .pasos-pasaje { margin-top: clamp(56px, 7vw, 88px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid rgba(255, 255, 255, .14); }
+    .paso-pasaje { padding: 2rem clamp(16px, 2.5vw, 32px) 0 0; position: relative; }
+    .paso-pasaje + .paso-pasaje { padding-left: clamp(16px, 2.5vw, 32px); border-left: 1px solid rgba(255, 255, 255, .14); }
+    .paso-pasaje::before {
+      content: ""; position: absolute; top: -6px; left: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--acento); box-shadow: 0 0 0 5px rgba(231, 166, 75, .2);
+    }
+    .paso-pasaje + .paso-pasaje::before { left: clamp(16px, 2.5vw, 32px); }
+    .paso-pasaje .icono { width: 30px; height: 30px; color: var(--acento); margin-bottom: 1rem; stroke-width: 1.6; }
+    .paso-pasaje h3 { font-family: var(--fuente-texto); color: #fff; font-size: .92rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .6rem; }
+    .paso-pasaje p { color: rgba(255, 255, 255, .78); }
+
+    /* Formulario pasajes con estilo de boleto */
+    .boleto { margin-top: clamp(56px, 8vw, 96px); display: grid; grid-template-columns: 300px 1fr; border-radius: var(--radio-lg); overflow: hidden; box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .65); }
+    .boleto-talon {
+      position: relative; background: var(--arena); color: var(--azul-profundo);
+      padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 1.4rem;
+    }
+    .boleto-talon::after {
+      content: ""; position: absolute; top: 0; bottom: 0; right: -1px; width: 2px;
+      background: repeating-linear-gradient(180deg, rgba(21, 51, 74, .35) 0 8px, transparent 8px 16px);
+    }
+    .boleto-talon h4 { font-family: var(--fuente-texto); font-size: .76rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; display: flex; align-items: center; gap: .5rem; }
+    .boleto-ruta { display: grid; gap: .3rem; }
+    .boleto-ruta small, .boleto-dato small { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6B5E48; }
+    .boleto-ruta strong { font-family: var(--fuente-display); font-size: 1.55rem; font-weight: 600; line-height: 1.15; word-break: break-word; }
+    .boleto-ruta .vacio-txt, .boleto-dato .vacio-txt { color: rgba(21, 51, 74, .38); }
+    .boleto-flecha { display: flex; align-items: center; gap: .5rem; color: var(--azul-secundario); margin: .2rem 0; }
+    .boleto-flecha::before, .boleto-flecha::after { content: ""; flex: 1; height: 1.5px; background: repeating-linear-gradient(90deg, rgba(21, 51, 74, .4) 0 6px, transparent 6px 10px); }
+    .boleto-datos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1.5px dashed rgba(21, 51, 74, .3); padding-top: 1.2rem; }
+    .boleto-dato { display: grid; gap: .2rem; }
+    .boleto-dato strong { font-size: .98rem; font-weight: 700; }
+    .boleto-aviso { margin-top: auto; font-size: .8rem; line-height: 1.45; color: #5E523E; display: flex; gap: .5rem; }
+    .boleto-aviso .icono { width: 1rem; height: 1rem; margin-top: .1rem; }
+    .boleto .form-card { border-radius: 0; box-shadow: none; border: 0; }
+    @media (max-width: 960px) {
+      .pasajes-intro { grid-template-columns: 1fr; }
+      .pasajes-visual { max-width: 560px; }
+      .boleto { grid-template-columns: 1fr; }
+      .boleto-talon::after { top: auto; left: 0; right: 0; bottom: -1px; width: auto; height: 2px; background: repeating-linear-gradient(90deg, rgba(21, 51, 74, .35) 0 8px, transparent 8px 16px); }
+      .boleto-datos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      .pasos-pasaje { grid-template-columns: 1fr; border-top: 0; }
+      .paso-pasaje, .paso-pasaje + .paso-pasaje { padding: 0 0 1.75rem 2rem; border-left: 1px solid rgba(255, 255, 255, .18); }
+      .paso-pasaje::before, .paso-pasaje + .paso-pasaje::before { left: -6px; top: 4px; }
+      .paso-pasaje:last-child { padding-bottom: 0; }
+      .boleto-datos { grid-template-columns: 1fr 1fr; }
+      .pasajes-visual::before { inset: 14px -8px -10px 14px; }
+    }
+
+    /* =========================================================
+       FAQ
+       ========================================================= */
+    .faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
+    .faq-intro { position: sticky; top: calc(var(--header-h) + 32px); }
+    .faq-intro p { margin-top: 1rem; color: var(--texto-sec); }
+    .faq-intro .btn { margin-top: 1.75rem; }
+    .faq-lista { border-top: 1px solid var(--linea); }
+    .faq-item { border-bottom: 1px solid var(--linea); }
+    .faq-item summary {
+      list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1.25rem;
+      padding: 1.35rem 0; font-weight: 700; font-size: 1.06rem; color: var(--azul-profundo); border-radius: 6px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary:hover { color: var(--azul-secundario); }
+    .faq-toggle { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--gris); color: var(--azul-profundo); transition: transform .3s var(--ease), background-color .3s, color .3s; }
+    .faq-toggle .icono { width: 18px; height: 18px; }
+    .faq-item[open] .faq-toggle { transform: rotate(45deg); background: var(--acento); color: var(--texto); }
+    .faq-respuesta { padding: 0 3.5rem 1.5rem 0; color: var(--texto-sec); }
+    .faq-item[open] .faq-respuesta { animation: aparecer .35s var(--ease); }
+    .faq-respuesta a { color: var(--azul-secundario); font-weight: 700; }
+    @media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; } .faq-intro { position: static; } .faq-respuesta { padding-right: 0; } }
+
+    /* =========================================================
+       CONTACTO
+       ========================================================= */
+    .contacto { overflow: hidden; }
+    .contacto-cabecera { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(24px, 5vw, 72px); align-items: end; margin-bottom: clamp(36px, 5vw, 56px); }
+    .contacto-cabecera p { font-size: 1.1rem; }
+    .contacto-acciones { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .accion {
+      position: relative; display: flex; flex-direction: column; gap: 1rem;
+      padding: clamp(26px, 3.5vw, 44px); border-radius: var(--radio-lg);
+      text-decoration: none; overflow: hidden; min-height: 260px;
+      transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+    }
+    .accion:hover { transform: translateY(-4px); box-shadow: var(--sombra); }
+    .accion.turismo { background: #fff; color: var(--azul-profundo); }
+    .accion.pasaje { background: var(--azul-profundo); color: #fff; }
+    .accion-icono { width: 60px; height: 60px; border-radius: 18px; display: grid; place-items: center; }
+    .accion.turismo .accion-icono { background: var(--celeste); color: var(--azul-profundo); }
+    .accion.pasaje .accion-icono { background: rgba(255, 255, 255, .1); color: var(--acento); }
+    .accion-icono .icono { width: 28px; height: 28px; }
+    .accion h3 { font-family: var(--fuente-texto); color: inherit; font-size: 1rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; line-height: 1.35; }
+    .accion p { color: inherit !important; opacity: .8; }
+    .accion-cta { margin-top: auto; display: inline-flex; align-items: center; gap: .6rem; font-weight: 800; font-size: .84rem; letter-spacing: .08em; text-transform: uppercase; }
+    .accion-cta .icono-relleno { width: 1.2rem; height: 1.2rem; }
+    .accion.pasaje .accion-cta { color: var(--acento); }
+    .accion.turismo .accion-cta { color: var(--azul-secundario); }
+    .accion .flecha { transition: transform .3s var(--ease); }
+    .accion:hover .flecha { transform: translateX(5px); }
+    .accion-deco { position: absolute; right: -40px; bottom: -40px; width: 200px; height: 200px; border-radius: 50%; border: 2px dashed currentColor; opacity: .12; pointer-events: none; }
+
+    .contacto-datos { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; }
+    .contacto-datos[hidden] { display: none; }
+    .dato {
+      display: flex; gap: .9rem; align-items: flex-start; padding: 1.1rem 1.2rem; border-radius: var(--radio);
+      background: rgba(255, 255, 255, .6); border: 1px solid rgba(21, 51, 74, .1); text-decoration: none; color: var(--texto); min-width: 0;
+    }
+    a.dato:hover { background: #fff; }
+    .dato .icono { color: var(--azul-secundario); margin-top: .15rem; }
+    .dato small { display: block; font-size: .74rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-sec-alt); }
+    .dato span { display: block; font-weight: 600; overflow-wrap: anywhere; }
+    @media (max-width: 820px) { .contacto-cabecera, .contacto-acciones { grid-template-columns: 1fr; } .accion { min-height: 0; } }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    .footer { background: var(--azul-noche); color: rgba(255, 255, 255, .78); padding: clamp(56px, 8vw, 88px) 0 calc(28px + env(safe-area-inset-bottom)); font-size: .96rem; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: clamp(28px, 4vw, 56px); }
+    .footer .marca { color: #fff; }
+    .footer .marca-simbolo rect { stroke: rgba(255, 255, 255, .2); }
+    .footer-desc { margin-top: 1.2rem; max-width: 22rem; }
+    .footer h3 { font-family: var(--fuente-texto); color: #fff; font-size: .78rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 1.1rem; }
+    .footer-lista { display: grid; gap: .55rem; }
+    .footer-lista a { text-decoration: none; color: rgba(255, 255, 255, .78); transition: color .2s; display: inline-flex; align-items: center; gap: .55rem; overflow-wrap: anywhere; }
+    .footer-lista a:hover { color: var(--acento); }
+    .footer-lista .icono { width: 1.05rem; height: 1.05rem; }
+    .footer-lista li > span { display: inline-flex; gap: .55rem; }
+    .footer-legal { margin-top: clamp(40px, 6vw, 64px); padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, .12); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 2rem; font-size: .86rem; color: rgba(255, 255, 255, .62); }
+    @media (max-width: 960px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-grid > :first-child { grid-column: 1 / -1; } }
+    @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    /* =========================================================
+       WHATSAPP FLOTANTE, AVISOS
+       ========================================================= */
+    .wa-flotante {
+      position: fixed; z-index: 90;
+      right: max(20px, env(safe-area-inset-right));
+      bottom: max(20px, calc(env(safe-area-inset-bottom) + 12px));
+      width: 60px; height: 60px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--wa); color: #fff; text-decoration: none;
+      box-shadow: 0 10px 24px -8px rgba(0, 0, 0, .35), 0 2px 6px rgba(0, 0, 0, .12);
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease), opacity .3s var(--ease);
+    }
+    .wa-flotante .icono { width: 32px; height: 32px; }
+    .wa-flotante:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 16px 30px -10px rgba(0, 0, 0, .4); }
+    .wa-flotante:focus-visible { outline-color: var(--azul-profundo); outline-offset: 4px; border-radius: 50%; }
+    .wa-etiqueta {
+      position: absolute; right: calc(100% + 12px); top: 50%; transform: translate(6px, -50%);
+      background: #fff; color: var(--azul-profundo); white-space: nowrap; font-weight: 700; font-size: .86rem;
+      padding: .5rem .85rem; border-radius: 10px; box-shadow: var(--sombra-sm);
+      opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s var(--ease);
+    }
+    .wa-flotante:hover .wa-etiqueta, .wa-flotante:focus-visible .wa-etiqueta { opacity: 1; transform: translate(0, -50%); }
+    .wa-flotante.oculto { opacity: 0; transform: translateY(16px) scale(.9); pointer-events: none; }
+    @media (max-width: 640px) {
+      .wa-flotante { width: 54px; height: 54px; right: max(14px, env(safe-area-inset-right)); bottom: max(14px, calc(env(safe-area-inset-bottom) + 8px)); }
+      .wa-flotante .icono { width: 28px; height: 28px; }
+      .wa-etiqueta { display: none; }
+    }
+
+    .toast {
+      position: fixed; left: 50%; bottom: max(24px, calc(env(safe-area-inset-bottom) + 16px)); z-index: 150;
+      transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
+      width: min(92vw, 460px); padding: .95rem 1.15rem; border-radius: 14px;
+      background: var(--azul-profundo); color: #fff; font-size: .94rem; font-weight: 600; box-shadow: var(--sombra);
+      transition: opacity .3s var(--ease), transform .3s var(--ease);
+    }
+    .toast.visible { opacity: 1; transform: translate(-50%, 0); }
+
+    .aviso-config {
+      position: fixed; left: max(14px, env(safe-area-inset-left)); bottom: max(14px, calc(env(safe-area-inset-bottom) + 8px)); z-index: 80;
+      max-width: min(calc(100vw - 100px), 340px);
+      display: flex; align-items: center; gap: .6rem;
+      background: #FBF1E1; color: #6B4A12; border: 1px solid #EBCB97; border-radius: 12px;
+      padding: .55rem .6rem .55rem .85rem; font-size: .8rem; font-weight: 600; line-height: 1.35;
+      box-shadow: var(--sombra-sm);
+    }
+    .aviso-config[hidden] { display: none; }
+    .aviso-config button { flex: none; width: 32px; height: 32px; border-radius: 8px; border: 0; background: transparent; color: inherit; cursor: pointer; display: grid; place-items: center; }
+    .aviso-config button:hover { background: rgba(107, 74, 18, .1); }
+    .aviso-config code { font-size: .78rem; }
+
+    /* =========================================================
+       ANIMACIONES DE ENTRADA
+       ========================================================= */
+    .js .revelar { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: var(--d, 0s); }
+    .js .revelar.visible { opacity: 1; transform: none; }
+    .js .beneficio.revelar.visible:nth-child(even) { transform: translateY(32px); }
+    @media (max-width: 560px) { .js .beneficio.revelar.visible:nth-child(even) { transform: none; } }
+
+    .hero-contenido > * { animation: subir 1s var(--ease) both; }
+    .hero-contenido > :nth-child(2) { animation-delay: .08s; }
+    .hero-contenido > :nth-child(3) { animation-delay: .16s; }
+    .hero-contenido > :nth-child(4) { animation-delay: .24s; }
+    .hero-contenido > :nth-child(5) { animation-delay: .32s; }
+    @keyframes subir { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
+      .js .revelar { opacity: 1; transform: none; }
+      .btn:hover, .servicio:hover, .destino:hover, .accion:hover, .wa-flotante:hover { transform: none; }
+      .servicio:hover .media img, .destino:hover .media img { transform: none; }
+    }
+
+    @media print {
+      .header, .wa-flotante, .aviso-config, .toast { display: none !important; }
+      .js .revelar { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- =========================================================
+       ICONOS (sprite SVG)
+       ========================================================= -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 2.2a9.8 9.8 0 0 0-8.4 14.8L2.2 21.8l4.9-1.3A9.8 9.8 0 1 0 12 2.2Zm0 17.9a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.1 8.1 0 1 1 12 20.1Z"/><path d="M16.5 14.2c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.2-.2-.2-.4-.3Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-cerrar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-mas" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-copo" viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9M9.5 4.5 12 7l2.5-2.5M9.5 19.5 12 17l2.5 2.5M4.8 11l2.9.8-.8 2.9M19.2 13l-2.9-.8.8-2.9"/></symbol>
+    <symbol id="i-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></symbol>
+    <symbol id="i-brujula" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-calendario" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol>
+    <symbol id="i-ruta" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8a3.5 3.5 0 0 0 0-7H8a3.5 3.5 0 0 1 0-7h8"/></symbol>
+    <symbol id="i-colectivo" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11.5h16M8 18v2.5M16 18v2.5M9 6.5h6"/><circle cx="8" cy="14.7" r=".9"/><circle cx="16" cy="14.7" r=".9"/></symbol>
+    <symbol id="i-boleto" viewBox="0 0 24 24"><path d="M4 6h16a1 1 0 0 1 1 1v3a2 2 0 0 0 0 4v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-3a2 2 0 0 0 0-4V7a1 1 0 0 1 1-1Z"/><path d="M14.5 6v2.5M14.5 10.8v2.4M14.5 15.5V18"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1-4.4A8.5 8.5 0 1 1 20.5 12Z"/><path d="M8.5 10.5h7M8.5 14h4.5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.2"/></symbol>
+    <symbol id="i-personas" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/></symbol>
+    <symbol id="i-mapa" viewBox="0 0 24 24"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4Z"/><path d="M9 4v14M15 6v14"/></symbol>
+    <symbol id="i-telefono" viewBox="0 0 24 24"><path d="M21 16.4v2.8a1.9 1.9 0 0 1-2.1 1.9 18.7 18.7 0 0 1-8.2-2.9 18.4 18.4 0 0 1-5.7-5.7A18.7 18.7 0 0 1 2.1 4.2 1.9 1.9 0 0 1 4 2.1h2.8a1.9 1.9 0 0 1 1.9 1.6c.1.9.3 1.7.6 2.5a1.9 1.9 0 0 1-.4 2L7.7 9.4a15.2 15.2 0 0 0 5.7 5.7l1.2-1.2a1.9 1.9 0 0 1 2-.4c.8.3 1.6.5 2.5.6a1.9 1.9 0 0 1 1.9 1.9Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r=".6"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M15 3.5h-2.4A4.1 4.1 0 0 0 8.5 7.6V10.5H6v3.5h2.5v6.5H12V14h2.6l.5-3.5H12V8.1c0-.5.4-.9.9-.9H15V3.5Z"/></symbol>
+    <symbol id="i-valija" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="2.5"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M9 7v13M15 7v13"/></symbol>
+    <symbol id="i-montana" viewBox="0 0 24 24"><path d="M2.5 19.5 9 9l3.8 6 2.2-3 6.5 7.5h-19Z"/><path d="m7.4 11.6 1.6 1 1.4-1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-carta" viewBox="0 0 24 24"><path d="M4 5h11l5 5v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/><path d="M15 5v5h5M7 13h9M7 16.5h6"/></symbol>
+  </svg>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- =========================================================
+       NAVEGACIÓN
+       ========================================================= -->
+  <header class="header" id="header">
+    <div class="contenedor">
+      <a class="marca" href="#inicio" aria-label="Altamirano Nosiglia, ir al inicio">
+        <!-- Si EMPRESA.logo tiene una URL, JS reemplaza este símbolo por la imagen del logotipo. -->
+        <span class="marca-grafico" data-logo>
+          <svg class="marca-simbolo" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <rect x=".5" y=".5" width="39" height="39" rx="11" fill="#15334A"/>
+            <circle cx="27.5" cy="12.5" r="4" fill="#E7A64B"/>
+            <path d="M6.5 30 16.5 14l6 9.2 3.2-4.4L33.5 30Z" fill="#DCECF2"/>
+            <path d="M6.5 30h27" stroke="#E7A64B" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="marca-texto">
+          <span class="marca-nombre">Altamirano Nosiglia</span>
+          <span class="marca-sub">Viajes y turismo</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <svg class="icono i-abrir" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icono i-cerrar" aria-hidden="true"><use href="#i-cerrar"/></svg>
+        <span class="txt" aria-hidden="true">Menú</span>
+      </button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav-lista">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#viajes">Viajes turísticos</a></li>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#temporadas">Invierno y verano</a></li>
+          <li><a href="#pasajes">Pasajes de colectivo</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn-primario nav-cta" data-wa="general">
+          <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          Consultar por WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <!-- Para usar una foto o video real: completar IMAGENES.hero en la configuración (JS). -->
+      <div class="hero-media media" data-media="hero" data-escena="lagos" data-alt="Ilustración de un lago entre montañas con bosques al atardecer" data-eager></div>
+
+      <div class="contenedor">
+        <div class="hero-contenido">
+          <p class="antetitulo">Altamirano Nosiglia · Viajes y turismo</p>
+          <h1 id="hero-titulo">Tu próximo destino <em>comienza acá.</em></h1>
+          <p class="hero-texto">Descubrí nuevos lugares, disfrutá tus vacaciones y encontrá tu próxima forma de viajar con Altamirano Nosiglia.</p>
+          <div class="hero-acciones">
+            <a class="btn btn-primario" href="#viajes">
+              Conocé nuestros viajes
+              <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg>
+            </a>
+            <a class="btn btn-claro" href="#pasajes">
+              <svg class="icono" aria-hidden="true"><use href="#i-boleto"/></svg>
+              Consultá pasajes
+            </a>
+          </div>
+          <a class="hero-wa" data-wa="general">
+            <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            O escribinos directamente por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-pie">
+        <div class="contenedor">
+          <div class="hero-servicios">
+            <span><svg class="icono" aria-hidden="true"><use href="#i-montana"/></svg>Viajes turísticos</span>
+            <span><svg class="icono" aria-hidden="true"><use href="#i-colectivo"/></svg>Pasajes de colectivo</span>
+          </div>
+          <a class="hero-scroll" href="#servicios"><span class="linea" aria-hidden="true"></span>Descubrí más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ACCESO RÁPIDO A LOS DOS SERVICIOS
+         ========================================================= -->
+    <section class="seccion fondo-gris" id="servicios" aria-labelledby="servicios-titulo">
+      <div class="contenedor">
+        <div class="encabezado centrado revelar">
+          <p class="antetitulo">Nuestros servicios</p>
+          <h2 id="servicios-titulo">¿Qué estás buscando para tu <em>próximo viaje?</em></h2>
+          <p>Elegí la opción que necesitás y encontrá la información para empezar a organizarlo.</p>
+        </div>
+
+        <div class="servicios-grid">
+          <article class="servicio turismo revelar">
+            <div class="media" data-media="servicioTurismo" data-escena="vinedos" data-alt="Ilustración de cordillera nevada y viñedos bajo un cielo despejado">
+              <span class="servicio-num"><svg class="icono" aria-hidden="true"><use href="#i-montana"/></svg>01 · Turismo</span>
+            </div>
+            <div class="servicio-cuerpo">
+              <h3>Viajes para disfrutar</h3>
+              <p>Descubrí destinos, escapadas y propuestas especiales para disfrutar durante diferentes momentos del año.</p>
+              <ul class="etiquetas" aria-label="Tipos de viaje">
+                <li class="etiqueta"><svg class="icono" aria-hidden="true"><use href="#i-copo"/></svg>Vacaciones de invierno</li>
+                <li class="etiqueta"><svg class="icono" aria-hidden="true"><use href="#i-sol"/></svg>Vacaciones de verano</li>
+                <li class="etiqueta"><svg class="icono" aria-hidden="true"><use href="#i-brujula"/></svg>Escapadas y salidas especiales</li>
+              </ul>
+              <a class="btn btn-oscuro" href="#viajes">
+                Explorar viajes
+                <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="servicio pasajes revelar" style="--d:.1s">
+            <div class="media" data-media="servicioPasajes" data-escena="ruta" data-alt="Ilustración de un colectivo de larga distancia circulando por una ruta entre sierras">
+              <span class="servicio-num"><svg class="icono" aria-hidden="true"><use href="#i-colectivo"/></svg>02 · Pasajes</span>
+            </div>
+            <div class="servicio-cuerpo">
+              <h3>Pasajes para llegar a destino</h3>
+              <p>Consultá por pasajes de colectivos de línea y obtené información para organizar tu traslado.</p>
+              <ul class="etiquetas" aria-label="Datos para consultar">
+                <li class="etiqueta"><svg class="icono" aria-hidden="true"><use href="#i-ruta"/></svg>Origen y destino</li>
+                <li class="etiqueta"><svg class="icono" aria-hidden="true"><use href="#i-calendario"/></svg>Fechas de viaje</li>
+                <li class="etiqueta"><svg class="icono" aria-hidden="true"><use href="#i-reloj"/></svg>Consultas sobre horarios y tarifas</li>
+              </ul>
+              <a class="btn btn-primario" href="#form-pasajes-titulo">
+                Consultar pasajes
+                <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         NOSOTROS (texto provisional, editable)
+         ========================================================= -->
+    <section class="seccion" id="nosotros" aria-labelledby="nosotros-titulo">
+      <div class="contenedor nosotros-grid">
+        <div class="nosotros-visual revelar">
+          <div class="media" data-media="nosotros" data-escena="camino" data-alt="Ilustración de un camino que se pierde entre montañas">
+          </div>
+          <div class="nosotros-sello" aria-hidden="true">
+            <span><svg class="icono" aria-hidden="true"><use href="#i-montana"/></svg>Viajes turísticos</span>
+            <span><svg class="icono" aria-hidden="true"><use href="#i-colectivo"/></svg>Pasajes de colectivo</span>
+          </div>
+        </div>
+        <div class="nosotros-texto revelar" style="--d:.1s">
+          <p class="antetitulo">Nosotros</p>
+          <h2 class="titulo-2" id="nosotros-titulo">Viajá con <em>Altamirano Nosiglia</em></h2>
+          <!-- TEXTO PROVISIONAL: reemplazar por la historia e identidad reales de la empresa. -->
+          <p>En Altamirano Nosiglia te acercamos propuestas para descubrir nuevos lugares, organizar tus vacaciones y consultar opciones de traslado hacia diferentes destinos.</p>
+          <p>Ya sea que estés pensando en un viaje turístico, una escapada especial o que necesites comprar un pasaje de colectivo, queremos ayudarte a encontrar la información que necesitás para planificar tu viaje.</p>
+          <p>Conocé nuestras propuestas y comunicate con nosotros para consultar por las opciones disponibles.</p>
+          <a class="btn btn-contorno" href="#servicios">
+            Conocé nuestros servicios
+            <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PRÓXIMOS VIAJES (se completa desde PROXIMOS_VIAJES en JS)
+         ========================================================= -->
+    <section class="seccion fondo-gris" id="viajes" aria-labelledby="viajes-titulo">
+      <div class="contenedor">
+        <div class="encabezado revelar">
+          <p class="antetitulo">Viajes turísticos</p>
+          <h2 id="viajes-titulo">Próximos viajes</h2>
+          <p>Empezá a planificar tu próxima experiencia.</p>
+        </div>
+        <div id="proximos-contenedor" class="revelar"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         DESTINOS (se completa desde DESTINOS en JS)
+         ========================================================= -->
+    <section class="seccion" id="destinos" aria-labelledby="destinos-titulo">
+      <div class="contenedor">
+        <div class="encabezado revelar">
+          <p class="antetitulo">Destinos</p>
+          <h2 id="destinos-titulo">Destinos para <em>descubrir</em></h2>
+          <p>Encontrá una propuesta para tu próxima aventura.</p>
+        </div>
+        <div class="destinos-grid" id="destinos-grid"></div>
+        <p class="destinos-nota revelar">
+          <svg class="icono" aria-hidden="true"><use href="#i-info"/></svg>
+          Consultanos por las propuestas, fechas y disponibilidad de cada destino.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TEMPORADAS
+         ========================================================= -->
+    <section class="seccion temporadas" id="temporadas" aria-labelledby="temporadas-titulo">
+      <div class="contenedor">
+        <div class="encabezado revelar">
+          <p class="antetitulo">Invierno y verano</p>
+          <h2 id="temporadas-titulo">Cada temporada, <em>un nuevo destino</em></h2>
+          <p>Hay momentos del año que invitan a hacer las valijas.</p>
+        </div>
+
+        <div class="temporadas-grid">
+          <article class="temporada revelar">
+            <div class="media" data-media="invierno" data-escena="nieve" data-alt="Ilustración de montañas nevadas y pinos cubiertos de nieve"></div>
+            <div class="temporada-cuerpo">
+              <span class="temporada-tag"><svg class="icono" aria-hidden="true"><use href="#i-copo"/></svg>Invierno</span>
+              <h3>Vacaciones de invierno</h3>
+              <p>Descubrí paisajes únicos y conocé propuestas para disfrutar de tus vacaciones de invierno.</p>
+              <a class="btn btn-primario" data-wa="invierno">
+                <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Consultar viajes de invierno
+              </a>
+            </div>
+          </article>
+
+          <article class="temporada revelar" style="--d:.1s">
+            <div class="media" data-media="verano" data-escena="playa" data-alt="Ilustración de una playa soleada con mar y sombrilla"></div>
+            <div class="temporada-cuerpo">
+              <span class="temporada-tag"><svg class="icono" aria-hidden="true"><use href="#i-sol"/></svg>Verano</span>
+              <h3>Vacaciones de verano</h3>
+              <p>Prepará las valijas y empezá a planificar tus próximas vacaciones.</p>
+              <a class="btn btn-primario" data-wa="verano">
+                <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Consultar viajes de verano
+              </a>
+            </div>
+          </article>
+
+          <article class="temporada revelar" style="--d:.2s">
+            <div class="media" data-media="escapadas" data-escena="escapada" data-alt="Ilustración de un pueblo entre sierras al atardecer"></div>
+            <div class="temporada-cuerpo">
+              <span class="temporada-tag"><svg class="icono" aria-hidden="true"><use href="#i-brujula"/></svg>Todo el año</span>
+              <h3>Escapadas y salidas especiales</h3>
+              <p>Conocé otras propuestas para aprovechar fines de semana, feriados y diferentes momentos del año.</p>
+              <a class="btn btn-primario" data-wa="escapadas">
+                <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Consultar escapadas
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         POR QUÉ ELEGIRNOS
+         ========================================================= -->
+    <section class="seccion fondo-celeste" id="por-que" aria-labelledby="porque-titulo">
+      <div class="contenedor porque-grid">
+        <div class="porque-intro revelar">
+          <p class="antetitulo">Por qué elegirnos</p>
+          <h2 class="titulo-2" id="porque-titulo">Tu próximo viaje merece una <em>buena planificación</em></h2>
+          <p>Te acompañamos con información clara para que elijas la propuesta o el traslado que mejor se adapte a vos.</p>
+          <a class="btn btn-oscuro" href="#consulta-viaje">
+            Armar mi consulta
+            <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg>
+          </a>
+        </div>
+        <ul class="porque-lista">
+          <li class="beneficio revelar">
+            <span class="beneficio-icono"><svg class="icono" aria-hidden="true"><use href="#i-calendario"/></svg></span>
+            <h3>Propuestas para cada temporada</h3>
+            <p>Conocé alternativas para tus vacaciones de invierno, verano y otras épocas del año.</p>
+          </li>
+          <li class="beneficio revelar" style="--d:.08s">
+            <span class="beneficio-icono"><svg class="icono" aria-hidden="true"><use href="#i-mapa"/></svg></span>
+            <h3>Distintos destinos</h3>
+            <p>Explorá propuestas turísticas y consultá por las opciones disponibles.</p>
+          </li>
+          <li class="beneficio revelar" style="--d:.16s">
+            <span class="beneficio-icono"><svg class="icono" aria-hidden="true"><use href="#i-carta"/></svg></span>
+            <h3>Información para organizarte</h3>
+            <p>Obtené información sobre las propuestas que te interesan y los detalles de tu viaje.</p>
+          </li>
+          <li class="beneficio revelar" style="--d:.24s">
+            <span class="beneficio-icono"><svg class="icono" aria-hidden="true"><use href="#i-chat"/></svg></span>
+            <h3>Contacto directo</h3>
+            <p>Comunicate con Altamirano Nosiglia por WhatsApp para resolver tus consultas.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FORMULARIO DE VIAJES TURÍSTICOS
+         ========================================================= -->
+    <section class="seccion" id="consulta-viaje" aria-labelledby="form-turismo-titulo">
+      <div class="contenedor consulta-grid">
+        <div class="consulta-visual revelar">
+          <p class="antetitulo">Consulta de viajes turísticos</p>
+          <h2 class="titulo-2">Contanos qué viaje <em>tenés en mente</em></h2>
+          <ol class="pasos">
+            <li class="paso"><span class="paso-num">1</span><div><strong>Completá el formulario</strong><span>Indicá el destino, el tipo de viaje y la cantidad de pasajeros.</span></div></li>
+            <li class="paso"><span class="paso-num">2</span><div><strong>Revisá tu mensaje</strong><span>Preparamos el texto con los datos que ingresaste.</span></div></li>
+            <li class="paso"><span class="paso-num">3</span><div><strong>Envialo por WhatsApp</strong><span>La consulta se envía cuando vos la confirmás desde WhatsApp.</span></div></li>
+          </ol>
+          <div class="media" data-media="consulta" data-escena="mundo" data-alt="Ilustración de un avión surcando el cielo entre nubes al atardecer"></div>
+        </div>
+
+        <div class="form-card revelar" style="--d:.1s">
+          <h3 id="form-turismo-titulo">¿A dónde te gustaría viajar?</h3>
+          <p class="form-sub">Contanos qué viaje tenés en mente y te ayudamos a encontrar la información que necesitás.</p>
+
+          <form class="form" id="form-turismo" novalidate aria-labelledby="form-turismo-titulo">
+            <div class="campo completo">
+              <label for="t-nombre">Nombre y apellido<span class="req" aria-hidden="true">*</span></label>
+              <input class="control" id="t-nombre" name="nombre" type="text" autocomplete="name" maxlength="80" required aria-describedby="t-nombre-error">
+              <span class="error" id="t-nombre-error"></span>
+            </div>
+
+            <div class="campo">
+              <label for="t-telefono">Teléfono de contacto <span class="opcional">(opcional)</span></label>
+              <input class="control" id="t-telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" aria-describedby="t-telefono-error">
+              <span class="error" id="t-telefono-error"></span>
+            </div>
+
+            <div class="campo">
+              <label for="t-pasajeros">Cantidad de pasajeros<span class="req" aria-hidden="true">*</span></label>
+              <input class="control" id="t-pasajeros" name="pasajeros" type="number" inputmode="numeric" min="1" max="50" step="1" value="1" required aria-describedby="t-pasajeros-error">
+              <span class="error" id="t-pasajeros-error"></span>
+            </div>
+
+            <div class="campo">
+              <label for="t-destino">Destino de interés<span class="req" aria-hidden="true">*</span></label>
+              <select class="control" id="t-destino" name="destino" required aria-describedby="t-destino-error"></select>
+              <span class="error" id="t-destino-error"></span>
+            </div>
+
+            <div class="campo">
+              <label for="t-tipo">Tipo de viaje<span class="req" aria-hidden="true">*</span></label>
+              <select class="control" id="t-tipo" name="tipo" required aria-describedby="t-tipo-error"></select>
+              <span class="error" id="t-tipo-error"></span>
+            </div>
+
+            <div class="campo completo">
+              <label for="t-fecha">Fecha aproximada o temporada <span class="opcional">(opcional)</span></label>
+              <input class="control" id="t-fecha" name="fecha" type="text" maxlength="80" placeholder="Ej.: julio, vacaciones de verano, fin de semana largo">
+            </div>
+
+            <div class="campo completo">
+              <label for="t-comentarios">Comentarios adicionales <span class="opcional">(opcional)</span></label>
+              <textarea class="control" id="t-comentarios" name="comentarios" maxlength="600" placeholder="Contanos cualquier detalle que quieras consultar."></textarea>
+            </div>
+
+            <div class="form-acciones">
+              <div class="form-resumen-error" role="alert" id="t-resumen"></div>
+              <button class="btn btn-oscuro btn-bloque" type="submit">
+                <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Enviar consulta por WhatsApp
+              </button>
+              <p class="form-legal"><svg class="icono" aria-hidden="true"><use href="#i-info"/></svg>Se abrirá WhatsApp con tu mensaje preparado. La consulta se envía solo cuando vos la confirmás desde allí.</p>
+            </div>
+            <div class="form-resultado" id="t-resultado" hidden tabindex="-1"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PASAJES DE COLECTIVO
+         ========================================================= -->
+    <section class="seccion pasajes" id="pasajes" aria-labelledby="pasajes-titulo">
+      <div class="contenedor">
+        <div class="pasajes-intro">
+          <div class="revelar">
+            <p class="antetitulo">Pasajes de colectivo</p>
+            <h2 class="titulo-2" id="pasajes-titulo">Tu próximo destino, <em>a un pasaje de distancia</em></h2>
+            <p style="margin-top:1.5rem">En Altamirano Nosiglia también podés consultar por la compra de pasajes de colectivos de línea y obtener información para organizar tu próximo traslado.</p>
+            <p>Contanos a dónde necesitás viajar y consultanos por las opciones disponibles.</p>
+            <a class="btn btn-primario" data-wa="pasajes">
+              <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Consultar pasajes por WhatsApp
+            </a>
+          </div>
+          <div class="pasajes-visual revelar" style="--d:.1s">
+            <div class="media" data-media="pasajes" data-escena="ruta-noche" data-alt="Ilustración de un colectivo de larga distancia viajando de noche por la ruta"></div>
+          </div>
+        </div>
+
+        <ul class="pasos-pasaje">
+          <li class="paso-pasaje revelar">
+            <svg class="icono" aria-hidden="true"><use href="#i-pin"/></svg>
+            <h3>Consultá tu destino</h3>
+            <p>Indicá desde dónde salís y hacia dónde necesitás viajar.</p>
+          </li>
+          <li class="paso-pasaje revelar" style="--d:.1s">
+            <svg class="icono" aria-hidden="true"><use href="#i-calendario"/></svg>
+            <h3>Organizá tu viaje</h3>
+            <p>Consultá por fechas, horarios, tarifas y disponibilidad.</p>
+          </li>
+          <li class="paso-pasaje revelar" style="--d:.2s">
+            <svg class="icono" aria-hidden="true"><use href="#i-chat"/></svg>
+            <h3>Recibí información</h3>
+            <p>Comunicate con Altamirano Nosiglia para conocer las opciones de pasajes disponibles.</p>
+          </li>
+        </ul>
+
+        <!-- Formulario con estilo de boleto -->
+        <div class="boleto revelar" id="form-pasajes">
+          <aside class="boleto-talon" aria-label="Resumen de los datos ingresados">
+            <h4><svg class="icono" aria-hidden="true"><use href="#i-boleto"/></svg>Resumen de tu consulta</h4>
+            <div class="boleto-ruta">
+              <small>Origen</small>
+              <strong data-resumen="origen"><span class="vacio-txt">¿Desde dónde?</span></strong>
+              <div class="boleto-flecha" aria-hidden="true"><svg class="icono" aria-hidden="true"><use href="#i-colectivo"/></svg></div>
+              <small>Destino</small>
+              <strong data-resumen="destino"><span class="vacio-txt">¿Hacia dónde?</span></strong>
+            </div>
+            <div class="boleto-datos">
+              <div class="boleto-dato"><small>Salida</small><strong data-resumen="fecha"><span class="vacio-txt">—</span></strong></div>
+              <div class="boleto-dato"><small>Regreso</small><strong data-resumen="regreso"><span class="vacio-txt">—</span></strong></div>
+              <div class="boleto-dato"><small>Pasajeros</small><strong data-resumen="pasajeros">1</strong></div>
+              <div class="boleto-dato"><small>Tipo</small><strong data-resumen="tipo">Solo ida</strong></div>
+            </div>
+            <p class="boleto-aviso"><svg class="icono" aria-hidden="true"><use href="#i-info"/></svg>Este resumen no es un pasaje ni una reserva. Solo te ayuda a preparar tu consulta.</p>
+          </aside>
+
+          <div class="form-card">
+            <h3 id="form-pasajes-titulo">¿A dónde necesitás viajar?</h3>
+            <p class="form-sub">Completá los datos de tu viaje y envianos tu consulta por WhatsApp.</p>
+
+            <form class="form" id="form-pasajes-form" novalidate aria-labelledby="form-pasajes-titulo">
+              <div class="campo completo">
+                <label for="p-nombre">Nombre y apellido<span class="req" aria-hidden="true">*</span></label>
+                <input class="control" id="p-nombre" name="nombre" type="text" autocomplete="name" maxlength="80" required aria-describedby="p-nombre-error">
+                <span class="error" id="p-nombre-error"></span>
+              </div>
+
+              <div class="campo">
+                <label for="p-origen">Localidad de origen<span class="req" aria-hidden="true">*</span></label>
+                <input class="control" id="p-origen" name="origen" type="text" maxlength="80" required autocomplete="address-level2" aria-describedby="p-origen-error">
+                <span class="error" id="p-origen-error"></span>
+              </div>
+
+              <div class="campo">
+                <label for="p-destino">Localidad de destino<span class="req" aria-hidden="true">*</span></label>
+                <input class="control" id="p-destino" name="destino" type="text" maxlength="80" required aria-describedby="p-destino-error">
+                <span class="error" id="p-destino-error"></span>
+              </div>
+
+              <fieldset class="campo completo">
+                <legend>Tipo de pasaje</legend>
+                <div class="segmento">
+                  <input type="radio" id="p-tipo-ida" name="tipo" value="Solo ida" checked>
+                  <label for="p-tipo-ida">Solo ida</label>
+                  <input type="radio" id="p-tipo-vuelta" name="tipo" value="Ida y vuelta">
+                  <label for="p-tipo-vuelta">Ida y vuelta</label>
+                </div>
+              </fieldset>
+
+              <div class="campo">
+                <label for="p-fecha">Fecha estimada del viaje<span class="req" aria-hidden="true">*</span></label>
+                <input class="control" id="p-fecha" name="fecha" type="date" required aria-describedby="p-fecha-error">
+                <span class="error" id="p-fecha-error"></span>
+              </div>
+
+              <div class="campo">
+                <label for="p-pasajeros">Cantidad de pasajeros<span class="req" aria-hidden="true">*</span></label>
+                <input class="control" id="p-pasajeros" name="pasajeros" type="number" inputmode="numeric" min="1" max="50" step="1" value="1" required aria-describedby="p-pasajeros-error">
+                <span class="error" id="p-pasajeros-error"></span>
+              </div>
+
+              <div class="campo completo campo-regreso" id="p-regreso-campo" hidden>
+                <label for="p-regreso">Fecha de regreso<span class="req" aria-hidden="true">*</span></label>
+                <input class="control" id="p-regreso" name="regreso" type="date" disabled aria-describedby="p-regreso-error">
+                <span class="error" id="p-regreso-error"></span>
+              </div>
+
+              <div class="campo completo">
+                <label for="p-comentarios">Comentarios adicionales <span class="opcional">(opcional)</span></label>
+                <textarea class="control" id="p-comentarios" name="comentarios" maxlength="600" placeholder="Por ejemplo: preferencia de horario o cualquier dato que quieras consultar."></textarea>
+              </div>
+
+              <div class="form-acciones">
+                <div class="form-resumen-error" role="alert" id="p-resumen"></div>
+                <button class="btn btn-primario btn-bloque" type="submit">
+                  <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                  Enviar consulta por WhatsApp
+                </button>
+                <p class="form-legal"><svg class="icono" aria-hidden="true"><use href="#i-info"/></svg>Esta consulta no reserva ni confirma pasajes. Se abrirá WhatsApp con tu mensaje para que lo revises y lo envíes.</p>
+              </div>
+              <div class="form-resultado" id="p-resultado" hidden tabindex="-1"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PREGUNTAS FRECUENTES
+         ========================================================= -->
+    <section class="seccion fondo-gris" id="preguntas" aria-labelledby="faq-titulo">
+      <div class="contenedor faq-grid">
+        <div class="faq-intro revelar">
+          <p class="antetitulo">Ayuda</p>
+          <h2 class="titulo-2" id="faq-titulo">Preguntas frecuentes</h2>
+          <p>Si tenés otra duda, escribinos y te respondemos por WhatsApp.</p>
+          <a class="btn btn-oscuro" data-wa="general">
+            <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Hacer una consulta
+          </a>
+        </div>
+
+        <div class="faq-lista revelar" style="--d:.1s">
+          <details class="faq-item">
+            <summary>¿Qué destinos turísticos ofrece Altamirano Nosiglia?<span class="faq-toggle" aria-hidden="true"><svg class="icono"><use href="#i-mas"/></svg></span></summary>
+            <div class="faq-respuesta"><p>Las propuestas pueden variar según la temporada y las salidas que organice la empresa. Para conocer los destinos disponibles en este momento, consultanos por WhatsApp.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Organizan viajes durante las vacaciones de invierno y verano?<span class="faq-toggle" aria-hidden="true"><svg class="icono"><use href="#i-mas"/></svg></span></summary>
+            <div class="faq-respuesta"><p>Altamirano Nosiglia presenta propuestas para distintos momentos del año, incluidas las vacaciones de invierno y de verano. Los destinos y las fechas de cada temporada se informan al consultar con la empresa.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cómo puedo conocer las próximas salidas?<span class="faq-toggle" aria-hidden="true"><svg class="icono"><use href="#i-mas"/></svg></span></summary>
+            <div class="faq-respuesta"><p>Las salidas confirmadas se publican en la sección <a href="#viajes">Próximos viajes</a>. También podés escribirnos por WhatsApp para consultar por las próximas fechas.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Puedo consultar por un destino que no aparece en la página?<span class="faq-toggle" aria-hidden="true"><svg class="icono"><use href="#i-mas"/></svg></span></summary>
+            <div class="faq-respuesta"><p>Sí, podés hacer tu consulta. En el <a href="#consulta-viaje">formulario de viajes turísticos</a> elegí “Otro destino” y contanos qué lugar te interesa.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cómo puedo comprar un pasaje de colectivo?<span class="faq-toggle" aria-hidden="true"><svg class="icono"><use href="#i-mas"/></svg></span></summary>
+            <div class="faq-respuesta"><p>Completá el <a href="#form-pasajes-titulo">formulario de pasajes</a> o escribinos por WhatsApp con tu origen, destino y fecha. La empresa te informará las opciones disponibles y cómo continuar con la compra.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cómo puedo consultar horarios y tarifas?<span class="faq-toggle" aria-hidden="true"><svg class="icono"><use href="#i-mas"/></svg></span></summary>
+            <div class="faq-respuesta"><p>Los horarios y las tarifas dependen del destino y de la fecha del viaje. Consultalos directamente con Altamirano Nosiglia por WhatsApp.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué información necesito para consultar un pasaje?<span class="faq-toggle" aria-hidden="true"><svg class="icono"><use href="#i-mas"/></svg></span></summary>
+            <div class="faq-respuesta"><p>Para empezar alcanza con la localidad de origen, la de destino, la fecha estimada, la cantidad de pasajeros y si viajás solo ida o ida y vuelta. Los datos que se piden al momento de la compra los informa la empresa.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Puedo consultar por pasajes de ida y vuelta?<span class="faq-toggle" aria-hidden="true"><svg class="icono"><use href="#i-mas"/></svg></span></summary>
+            <div class="faq-respuesta"><p>Sí. En el formulario de pasajes elegí “Ida y vuelta” e indicá la fecha de regreso. Las opciones disponibles se informan al responder tu consulta.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cómo puedo comunicarme con la empresa?<span class="faq-toggle" aria-hidden="true"><svg class="icono"><use href="#i-mas"/></svg></span></summary>
+            <div class="faq-respuesta"><p>Podés escribirnos por WhatsApp desde cualquiera de los botones de la página. Los demás datos de contacto disponibles figuran en la sección <a href="#contacto">Contacto</a>.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACTO
+         ========================================================= -->
+    <section class="seccion fondo-arena contacto" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="contenedor">
+        <div class="contacto-cabecera revelar">
+          <div>
+            <p class="antetitulo">Contacto</p>
+            <h2 class="titulo-2" id="contacto-titulo">Empezá a planificar tu <em>próximo viaje</em></h2>
+          </div>
+          <p>¿Estás buscando un viaje turístico o necesitás consultar por un pasaje de colectivo? Comunicate con Altamirano Nosiglia y contanos qué necesitás.</p>
+        </div>
+
+        <div class="contacto-acciones">
+          <a class="accion turismo revelar" data-wa="turismo">
+            <span class="accion-icono"><svg class="icono" aria-hidden="true"><use href="#i-valija"/></svg></span>
+            <h3>Consultar viajes turísticos</h3>
+            <p>Destinos, escapadas y propuestas de invierno y verano.</p>
+            <span class="accion-cta">
+              <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Escribir por WhatsApp
+              <svg class="icono flecha" aria-hidden="true"><use href="#i-flecha"/></svg>
+            </span>
+            <span class="accion-deco" aria-hidden="true"></span>
+          </a>
+          <a class="accion pasaje revelar" data-wa="pasajes" style="--d:.1s">
+            <span class="accion-icono"><svg class="icono" aria-hidden="true"><use href="#i-boleto"/></svg></span>
+            <h3>Consultar pasajes de colectivo</h3>
+            <p>Origen, destino, fechas, horarios y tarifas.</p>
+            <span class="accion-cta">
+              <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Escribir por WhatsApp
+              <svg class="icono flecha" aria-hidden="true"><use href="#i-flecha"/></svg>
+            </span>
+            <span class="accion-deco" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <!-- Se completa solo con los datos cargados en EMPRESA -->
+        <ul class="contacto-datos" id="contacto-datos" aria-label="Datos de contacto" hidden></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div>
+          <a class="marca" href="#inicio" aria-label="Altamirano Nosiglia, volver al inicio">
+            <span class="marca-grafico" data-logo>
+              <svg class="marca-simbolo" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+                <rect x=".5" y=".5" width="39" height="39" rx="11" fill="#15334A"/>
+                <circle cx="27.5" cy="12.5" r="4" fill="#E7A64B"/>
+                <path d="M6.5 30 16.5 14l6 9.2 3.2-4.4L33.5 30Z" fill="#DCECF2"/>
+                <path d="M6.5 30h27" stroke="#E7A64B" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="marca-texto">
+              <span class="marca-nombre">Altamirano Nosiglia</span>
+              <span class="marca-sub">Viajes y turismo</span>
+            </span>
+          </a>
+          <p class="footer-desc">Descubrí nuevos destinos y organizá tu próximo viaje con nosotros.</p>
+        </div>
+
+        <nav aria-label="Secciones del sitio">
+          <h3>Secciones</h3>
+          <ul class="footer-lista">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#destinos">Destinos</a></li>
+            <li><a href="#temporadas">Invierno y verano</a></li>
+            <li><a href="#preguntas">Preguntas frecuentes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3>Servicios</h3>
+          <ul class="footer-lista">
+            <li><a href="#viajes">Viajes turísticos</a></li>
+            <li><a href="#viajes">Próximos viajes</a></li>
+            <li><a href="#consulta-viaje">Consulta de viajes</a></li>
+            <li><a href="#pasajes">Pasajes de colectivo</a></li>
+            <li><a href="#form-pasajes-titulo">Consulta de pasajes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contacto</h3>
+          <ul class="footer-lista" id="footer-contacto">
+            <li><a data-wa="general"><svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <p>© <span id="anio"></span> Altamirano Nosiglia | Viajes y turismo. Todos los derechos reservados.</p>
+        <p>Las ilustraciones son de referencia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a class="wa-flotante" id="wa-flotante" data-wa="flotante" aria-label="Escribir a Altamirano Nosiglia por WhatsApp">
+    <svg class="icono icono-relleno" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    <span class="wa-etiqueta" aria-hidden="true">¿Tenés una consulta?</span>
+  </a>
+
+  <!-- Aviso visible solo mientras falte configurar el número -->
+  <div class="aviso-config" id="aviso-config" hidden>
+    <span>Vista previa: falta configurar el número de WhatsApp (<code>EMPRESA.whatsapp</code>).</span>
+    <button type="button" aria-label="Ocultar aviso"><svg class="icono" aria-hidden="true"><use href="#i-cerrar"/></svg></button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+  /* ==========================================================================
+     CONFIGURACIÓN CENTRALIZADA
+     Editá solo esta parte para cargar los datos reales de la empresa.
+     ========================================================================== */
+
+  const EMPRESA = {
+    nombre: "Altamirano Nosiglia",
+    // Formato internacional, SOLO dígitos (sin +, espacios, guiones ni paréntesis).
+    // Ejemplo de formato para Argentina: 549 + característica + número.
+    whatsapp: "REEMPLAZAR_POR_NUMERO_REAL",
+    telefono: "",     // Teléfono alternativo, tal como se quiere mostrar.
+    email: "",
+    instagram: "",    // URL completa: https://www.instagram.com/usuario
+    facebook: "",     // URL completa: https://www.facebook.com/pagina
+    direccion: "",
+    horarios: "",
+    logo: ""          // URL o ruta del logotipo (ej.: "img/logo.svg"). Vacío = símbolo provisional.
+  };
+
+  // Fotos reales autorizadas. Vacío = se muestra la ilustración de referencia.
+  const IMAGENES = {
+    hero: "",
+    servicioTurismo: "",
+    servicioPasajes: "",
+    nosotros: "",
+    invierno: "",
+    verano: "",
+    escapadas: "",
+    consulta: "",
+    pasajes: ""
+  };
+
+  // Mensajes predeterminados de WhatsApp.
+  const MENSAJES = {
+    general:   "Hola, Altamirano Nosiglia. Quisiera recibir información sobre sus viajes turísticos y pasajes de colectivo.",
+    flotante:  "Hola, Altamirano Nosiglia. Quisiera recibir información sobre sus viajes turísticos y pasajes de colectivo.",
+    turismo:   "Hola, Altamirano Nosiglia. Quisiera recibir información sobre sus viajes turísticos.",
+    pasajes:   "Hola, Altamirano Nosiglia. Quisiera consultar por la compra de un pasaje de colectivo.",
+    proximos:  "Hola, Altamirano Nosiglia. Quisiera conocer los próximos viajes y las fechas de salida disponibles.",
+    invierno:  "Hola, Altamirano Nosiglia. Quisiera recibir información sobre los viajes turísticos de invierno.",
+    verano:    "Hola, Altamirano Nosiglia. Quisiera recibir información sobre los viajes turísticos de verano.",
+    escapadas: "Hola, Altamirano Nosiglia. Quisiera consultar por escapadas y salidas especiales.",
+    destino:   (nombre) => `Hola, Altamirano Nosiglia. Quisiera recibir información sobre los viajes a ${nombre}.`,
+    viaje:     (titulo) => `Hola, Altamirano Nosiglia. Quisiera recibir información sobre el viaje "${titulo}".`
+  };
+
+  /* DESTINOS DE REFERENCIA (no son viajes confirmados).
+     Editá, quitá o agregá destinos. Campos:
+       nombre, descripcion, categoria, escena (ilustración), imagen (URL opcional), alt (texto alternativo de la imagen).
+     Si el array queda vacío, se muestra un bloque que invita a consultar por WhatsApp. */
+  const DESTINOS = [
+    { nombre: "Bariloche", categoria: "Lagos y montaña", escena: "lagos", imagen: "", alt: "",
+      descripcion: "Lagos, bosques y montañas de la Patagonia para disfrutar en cualquier época del año." },
+    { nombre: "Cataratas del Iguazú", categoria: "Naturaleza", escena: "cataratas", imagen: "", alt: "",
+      descripcion: "Saltos de agua y selva misionera en uno de los paisajes más impactantes del país." },
+    { nombre: "Mendoza", categoria: "Cordillera y viñedos", escena: "vinedos", imagen: "", alt: "",
+      descripcion: "La Cordillera de los Andes, viñedos y caminos de montaña." },
+    { nombre: "Salta y Jujuy", categoria: "Norte argentino", escena: "quebrada", imagen: "", alt: "",
+      descripcion: "Cerros de colores, quebradas y pueblos con historia." },
+    { nombre: "Córdoba", categoria: "Sierras", escena: "sierras", imagen: "", alt: "",
+      descripcion: "Sierras, ríos y valles para una escapada cerca de casa." },
+    { nombre: "Mar del Plata", categoria: "Costa atlántica", escena: "playa", imagen: "", alt: "",
+      descripcion: "Playas, mar y ciudad sobre la costa atlántica." },
+    { nombre: "Buenos Aires", categoria: "Ciudad", escena: "ciudad", imagen: "", alt: "",
+      descripcion: "Barrios, cultura, gastronomía y paseos en la gran ciudad." },
+    { nombre: "Destinos internacionales", categoria: "Internacional", escena: "mundo", imagen: "", alt: "",
+      descripcion: "Consultá por propuestas para viajar fuera del país.", mensaje: "Hola, Altamirano Nosiglia. Quisiera recibir información sobre viajes a destinos internacionales." }
+  ];
+
+  /* PRÓXIMOS VIAJES CONFIRMADOS.
+     Cargar SOLO salidas confirmadas por la empresa. Todos los campos son opcionales salvo "titulo";
+     los campos vacíos no se muestran. Ejemplo de estructura (no es un viaje real):
+     {
+       titulo: "Nombre del viaje",
+       imagen: "", alt: "", escena: "lagos",
+       salida: "2027-07-10", regreso: "2027-07-17",   // formato AAAA-MM-DD
+       duracion: "", descripcion: "", transporte: "",
+       incluye: [],          // lista de servicios incluidos
+       precio: "",           // tal como se quiera mostrar
+       estado: ""            // ej.: "Lugares disponibles", "Últimos lugares", "Completo"
+     }
+  */
+  const PROXIMOS_VIAJES = [];
+
+  // Opciones de los formularios (editables).
+  const OPCIONES_DESTINO = [
+    "Bariloche", "Cataratas del Iguazú", "Mendoza", "Salta y Jujuy", "Córdoba",
+    "Mar del Plata", "Buenos Aires", "Destino internacional", "Otro destino", "Todavía no lo decidí"
+  ];
+  const TIPOS_VIAJE = [
+    "Vacaciones de invierno", "Vacaciones de verano", "Escapada", "Viaje turístico", "Salida especial", "Otro"
+  ];
+  const PASAJEROS_MAX = 50;
+
+  /* ==========================================================================
+     UTILIDADES
+     ========================================================================== */
+
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+
+  function escaparHTML(valor) {
+    return String(valor ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+  const tieneValor = (v) => v !== undefined && v !== null && String(v).trim() !== "";
+  const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function urlSegura(url) {
+    if (!tieneValor(url)) return null;
+    try {
+      const u = new URL(String(url).trim(), window.location.href);
+      return ["http:", "https:"].includes(u.protocol) ? u.href : null;
+    } catch (e) { return null; }
+  }
+
+  function hoyISO() {
+    const d = new Date();
+    d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
+    return d.toISOString().slice(0, 10);
+  }
+  function formatearFecha(iso) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(iso || "")) return iso || "";
+    const [a, m, d] = iso.split("-");
+    return `${d}/${m}/${a}`;
+  }
+
+  const icono = (id, extra = "") => `<svg class="icono ${extra}" aria-hidden="true"><use href="#${id}"/></svg>`;
+
+  let toastTimer;
+  function mostrarAviso(texto) {
+    const t = $("#toast");
+    t.textContent = texto;
+    t.classList.add("visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove("visible"), 4200);
+  }
+
+  /* ==========================================================================
+     WHATSAPP
+     ========================================================================== */
+
+  function numeroWhatsApp() {
+    const n = String(EMPRESA.whatsapp || "").trim();
+    return /^\d{8,15}$/.test(n) ? n : null;
+  }
+
+  // Devuelve la URL de WhatsApp o null si el número no está configurado.
+  function crearLinkWhatsApp(mensaje) {
+    const numero = numeroWhatsApp();
+    if (!numero) return null;
+    return `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+  }
+
+  function mensajeDe(el) {
+    const clave = el.dataset.wa;
+    if (clave === "destino") return MENSAJES.destino(el.dataset.destino || "");
+    if (clave === "viaje") return MENSAJES.viaje(el.dataset.viaje || "");
+    if (clave === "personalizado") return el.dataset.mensaje || MENSAJES.general;
+    const m = MENSAJES[clave];
+    return typeof m === "string" ? m : MENSAJES.general;
+  }
+
+  // Conecta todos los elementos [data-wa] dentro de "raiz".
+  function conectarWhatsApp(raiz = document) {
+    $$("[data-wa]", raiz).forEach((el) => {
+      const url = crearLinkWhatsApp(mensajeDe(el));
+      if (url) {
+        el.href = url;
+        el.target = "_blank";
+        el.rel = "noopener noreferrer";
+        el.removeAttribute("aria-disabled");
+        el.removeAttribute("data-wa-pendiente");
+        el.removeAttribute("role");
+        el.removeAttribute("tabindex");
+      } else {
+        // Sin número configurado: no se genera un enlace inválido.
+        el.removeAttribute("href");
+        el.setAttribute("role", "button");
+        el.setAttribute("tabindex", "0");
+        el.setAttribute("aria-disabled", "true");
+        el.setAttribute("data-wa-pendiente", "");
+        el.title = "Número de WhatsApp pendiente de configuración";
+      }
+    });
+  }
+
+  function avisoPendiente(e) {
+    const el = e.target.closest("[data-wa-pendiente]");
+    if (!el) return;
+    if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return;
+    e.preventDefault();
+    mostrarAviso("El número de WhatsApp de la empresa todavía no fue configurado.");
+  }
+
+  /* ==========================================================================
+     ILUSTRACIONES (marcadores visuales hasta contar con fotos reales)
+     ========================================================================== */
+
+  function aleatorio(semilla) {
+    let s = semilla >>> 0;
+    return () => {
+      s += 0x6D2B79F5;
+      let t = s;
+      t = Math.imul(t ^ (t >>> 15), t | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  const grad = (id, stops, x2 = 0, y2 = 1) =>
+    `<linearGradient id="${id}" x1="0" y1="0" x2="${x2}" y2="${y2}">${stops.map(([o, c, op]) => `<stop offset="${o}" stop-color="${c}"${op !== undefined ? ` stop-opacity="${op}"` : ""}/>`).join("")}</linearGradient>`;
+
+  function pino(x, base, h, color, nieve) {
+    let p = `<rect x="${x - h * 0.03}" y="${base - h * 0.12}" width="${h * 0.06}" height="${h * 0.12}" fill="${color}"/>`;
+    for (let t = 0; t < 3; t++) {
+      const top = base - h + t * h * 0.26;
+      const bottom = top + h * 0.46;
+      const w = h * (0.15 + 0.07 * t);
+      p += `<path d="M${x} ${top}L${x - w} ${bottom}L${x + w} ${bottom}Z" fill="${color}"/>`;
+      if (nieve) p += `<path d="M${x} ${top}L${x - w * 0.45} ${top + h * 0.2}L${x + w * 0.45} ${top + h * 0.2}Z" fill="#F4F8FA"/>`;
+    }
+    return p;
+  }
+  function bosque(seed, desde, hasta, baseFn, hMin, hMax, color, nieve) {
+    const r = aleatorio(seed);
+    let s = "";
+    for (let x = desde; x < hasta; x += 18 + r() * 26) s += pino(x, baseFn(x) + r() * 6, hMin + r() * (hMax - hMin), color, nieve);
+    return s;
+  }
+  function nube(x, y, e = 1, op = 0.8) {
+    return `<g fill="#fff" opacity="${op}"><ellipse cx="${x}" cy="${y}" rx="${70 * e}" ry="${18 * e}"/><ellipse cx="${x - 30 * e}" cy="${y - 10 * e}" rx="${34 * e}" ry="${20 * e}"/><ellipse cx="${x + 18 * e}" cy="${y - 16 * e}" rx="${40 * e}" ry="${26 * e}"/></g>`;
+  }
+  function colectivo(x, y, e = 1, noche = false) {
+    // Colectivo de larga distancia de dos pisos (vista lateral). Genérico, sin marcas.
+    const cuerpo = noche ? "#E6EDF1" : "#FFFFFF";
+    const vidrio = noche ? "#F6D9A1" : "#245A73";
+    let ventanas = "";
+    for (let i = 0; i < 7; i++) ventanas += `<rect x="${44 + i * 58}" y="22" width="50" height="46" rx="6" fill="${vidrio}" opacity="${noche ? 0.9 : 1}"/>`;
+    for (let i = 0; i < 6; i++) ventanas += `<rect x="${96 + i * 58}" y="92" width="50" height="40" rx="6" fill="${vidrio}" opacity="${noche ? 0.75 : 0.92}"/>`;
+    return `<g transform="translate(${x} ${y}) scale(${e})">
+      <ellipse cx="260" cy="212" rx="270" ry="10" fill="#000" opacity=".18"/>
+      <path d="M18 4h430c26 0 42 14 52 38l20 54v84c0 12-8 20-20 20H18C8 200 0 192 0 182V22C0 12 8 4 18 4Z" fill="${cuerpo}"/>
+      ${ventanas}
+      <path d="M454 20h8c14 0 24 8 30 22l18 50h-56Z" fill="${vidrio}"/>
+      <rect x="40" y="96" width="44" height="82" rx="6" fill="${vidrio}" opacity=".85"/>
+      <path d="M454 104h62v20h-62Z" fill="${vidrio}" opacity=".85"/>
+      <rect x="0" y="142" width="520" height="12" fill="#E7A64B"/>
+      <rect x="0" y="154" width="520" height="30" fill="#15334A"/>
+      <circle cx="512" cy="172" r="6" fill="${noche ? "#FFF3C4" : "#F8E2B8"}"/>
+      <g fill="#172A36"><circle cx="110" cy="196" r="30"/><circle cx="178" cy="196" r="30"/><circle cx="420" cy="196" r="30"/></g>
+      <g fill="#9AA9B3"><circle cx="110" cy="196" r="12"/><circle cx="178" cy="196" r="12"/><circle cx="420" cy="196" r="12"/></g>
+    </g>`;
+  }
+
+  const ESCENAS = {
+    lagos(id) {
+      return {
+        defs: grad(`${id}c`, [[0, "#6FA3BF"], [0.55, "#CFE3EA"], [1, "#F5D9AE"]]) + grad(`${id}l`, [[0, "#8DB8C9"], [1, "#1E4A62"]]),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        <circle cx="860" cy="340" r="150" fill="#FBE7C3" opacity=".28"/><circle cx="860" cy="340" r="78" fill="#FBE7C3" opacity=".95"/>
+        ${nube(300, 150, 1.2, .55)}${nube(1040, 200, .9, .5)}
+        <path d="M0 470 120 380l90 50 120-130 90 80 100-50 120-80 120 110 100-60 120 90 100-60 120 70v130H0Z" fill="#A6C1CF"/>
+        <g fill="#F7FAFB" opacity=".9"><path d="M330 300 302 331l18-5 12 14 16-16 14 10Z"/><path d="M640 250 600 298l22-8 18 18 20-20 24 12Z"/><path d="M860 300 832 332l18-6 16 12 14-16 12 8Z"/></g>
+        <path d="M0 525 90 450l90 40 120-70 120 80 140-60 140 70 120-60 140 55 130-65 110 40v95H0Z" fill="#5F8AA0"/>
+        <rect y="545" width="1200" height="255" fill="url(#${id}l)"/>
+        <g fill="#FBE7C3" opacity=".55"><rect x="790" y="565" width="140" height="4" rx="2"/><rect x="810" y="585" width="100" height="4" rx="2"/><rect x="826" y="606" width="70" height="3" rx="2"/><rect x="840" y="628" width="44" height="3" rx="2"/></g>
+        <g fill="#fff" opacity=".18"><rect x="120" y="600" width="160" height="2" rx="1"/><rect x="430" y="650" width="220" height="2" rx="1"/><rect x="980" y="690" width="140" height="2" rx="1"/></g>
+        <path d="M0 640Q170 585 360 630T560 800H0Z" fill="#15334A"/>
+        ${bosque(7, 10, 470, (x) => 640 - Math.sin(x / 140) * 30 + (x > 300 ? (x - 300) * 0.25 : 0), 70, 130, "#15334A")}
+        <path d="M800 800Q960 660 1200 615V800Z" fill="#1A3E55"/>
+        ${bosque(11, 880, 1200, (x) => 800 - (x - 800) * 0.45, 60, 120, "#1A3E55")}`
+      };
+    },
+    cataratas(id) {
+      let saltos = "";
+      const r = aleatorio(3);
+      for (let x = 250; x < 960; x += 34 + r() * 30) {
+        const w = 14 + r() * 22;
+        saltos += `<rect x="${x}" y="${352 + r() * 20}" width="${w}" height="${200 + r() * 30}" fill="url(#${id}a)" opacity="${0.75 + r() * 0.25}"/>`;
+      }
+      return {
+        defs: grad(`${id}c`, [[0, "#A9D3E2"], [1, "#EEF5EE"]]) + grad(`${id}a`, [[0, "#FFFFFF"], [1, "#DDEFF3", 0.6]]) + grad(`${id}r`, [[0, "#6AA3AF"], [1, "#2A6070"]]),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        ${nube(220, 130, 1, .7)}${nube(900, 110, 1.3, .6)}
+        <path d="M0 300Q150 250 300 290T600 270T900 290T1200 260V420H0Z" fill="#7FAE84"/>
+        <path d="M0 340Q200 300 400 340T800 330T1200 320V420H0Z" fill="#4F8A62"/>
+        <path d="M220 360H980L1000 580H200Z" fill="#7A5D45"/>
+        <path d="M220 360H980V380H220Z" fill="#3F7A55"/>
+        ${saltos}
+        <path d="M0 360H230L215 600H0Z" fill="#2F6A4C"/><path d="M970 360H1200V600H990Z" fill="#2F6A4C"/>
+        <g fill="#fff" opacity=".55"><ellipse cx="400" cy="575" rx="220" ry="34"/><ellipse cx="760" cy="580" rx="260" ry="38"/><ellipse cx="600" cy="565" rx="160" ry="26"/></g>
+        <path d="M300 520A320 320 0 0 1 900 520" fill="none" stroke="#F3D9A2" stroke-width="10" opacity=".35"/>
+        <path d="M318 520A302 302 0 0 1 882 520" fill="none" stroke="#B9DCC0" stroke-width="8" opacity=".3"/>
+        <rect y="590" width="1200" height="210" fill="url(#${id}r)"/>
+        <g fill="#fff" opacity=".22"><rect x="200" y="630" width="200" height="3" rx="1.5"/><rect x="620" y="660" width="260" height="3" rx="1.5"/><rect x="380" y="710" width="180" height="3" rx="1.5"/></g>
+        <g fill="#1F4A36"><ellipse cx="60" cy="760" rx="160" ry="70" transform="rotate(-18 60 760)"/><ellipse cx="190" cy="800" rx="140" ry="50" transform="rotate(-35 190 800)"/><ellipse cx="1130" cy="760" rx="170" ry="70" transform="rotate(20 1130 760)"/><ellipse cx="1000" cy="805" rx="140" ry="44" transform="rotate(30 1000 805)"/></g>`
+      };
+    },
+    vinedos(id) {
+      let filas = "";
+      for (let i = -12; i <= 12; i++) {
+        filas += `<path d="M${600 + i * 22} 520L${600 + i * 190 - 34} 800H${600 + i * 190 + 34}Z" fill="#5E7D3C" opacity="${0.9 - Math.abs(i) * 0.015}"/>`;
+      }
+      let alamos = "";
+      for (let x = 30; x < 1200; x += 46) alamos += `<ellipse cx="${x}" cy="492" rx="11" ry="${30 + (x % 3) * 6}" fill="#6E8B4A"/>`;
+      return {
+        defs: grad(`${id}c`, [[0, "#8EBFD6"], [0.6, "#DDEBEE"], [1, "#F6E3C4"]]) + grad(`${id}s`, [[0, "#D8C38E"], [1, "#B79A5F"]]),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        <circle cx="240" cy="200" r="54" fill="#FCEBC8" opacity=".9"/>
+        ${nube(760, 140, 1.1, .6)}
+        <path d="M0 430 150 300l110 60 160-150 140 120 140-90 160 110 140-90 200 120V520H0Z" fill="#8EA6B6"/>
+        <g fill="#F8FBFC"><path d="M420 210 372 256l26-6 22 20 22-22 30 12Z"/><path d="M700 240 660 280l24-6 16 14 20-18 24 10Z"/><path d="M1000 260 966 292l20-4 14 12 16-14 20 8Z"/><path d="M150 300 120 326l18-4 12 10 14-12 14 6Z"/></g>
+        <path d="M0 470Q300 430 600 460T1200 450V520H0Z" fill="#A08A63"/>
+        ${alamos}
+        <rect y="512" width="1200" height="288" fill="url(#${id}s)"/>
+        ${filas}`
+      };
+    },
+    quebrada(id) {
+      const franjas = [["#C65A3F", 0], ["#E7A64B", .14], ["#B07A9E", .26], ["#D98E5A", .38], ["#86A35E", .5], ["#C65A3F", .62], ["#E9C38A", .74], ["#8E6A9E", .86], ["#D46E48", 1]];
+      const stops = [];
+      franjas.forEach(([c, o], i) => { stops.push([o, c]); if (franjas[i + 1]) stops.push([franjas[i + 1][1] - 0.001, c]); });
+      let cardones = "";
+      const r = aleatorio(19);
+      [140, 300, 820, 980, 1110].forEach((x, i) => {
+        const h = 120 + r() * 90, b = 700 + r() * 40;
+        cardones += `<g fill="#4D6B44"><rect x="${x - 12}" y="${b - h}" width="24" height="${h}" rx="12"/><rect x="${x - 46}" y="${b - h * 0.68}" width="18" height="${h * 0.36}" rx="9"/><rect x="${x - 46}" y="${b - h * 0.36}" width="40" height="16" rx="8"/><rect x="${x + 26}" y="${b - h * 0.8}" width="18" height="${h * 0.42}" rx="9"/><rect x="${x + 6}" y="${b - h * 0.42}" width="38" height="16" rx="8"/></g>`;
+      });
+      return {
+        defs: grad(`${id}c`, [[0, "#7DB6D3"], [1, "#E4F0F2"]]) + grad(`${id}f`, stops, 1, 0.55) + grad(`${id}g`, stops.map(([o, c]) => [o, c]), 0.6, 1),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        ${nube(980, 130, 1, .7)}
+        <path d="M0 420 160 300l140 70 180-170 200 160 140-90 200 120 180-60V560H0Z" fill="url(#${id}f)" opacity=".9"/>
+        <path d="M0 420 160 300l140 70 180-170 200 160 140-90 200 120 180-60V560H0Z" fill="#7DB6D3" opacity=".22"/>
+        <path d="M-40 560 260 380l260 200H-40Z" fill="url(#${id}g)"/>
+        <path d="M480 580 820 400l420 180Z" fill="url(#${id}f)"/>
+        <path d="M0 560Q300 540 600 580T1200 560V800H0Z" fill="#DDBE8E"/>
+        <path d="M0 640Q400 610 800 650T1200 640V800H0Z" fill="#CFA978"/>
+        <path d="M520 800Q600 700 700 640" stroke="#E9D3AE" stroke-width="26" fill="none" stroke-linecap="round"/>
+        ${cardones}`
+      };
+    },
+    sierras(id) {
+      return {
+        defs: grad(`${id}c`, [[0, "#A9D2E2"], [1, "#F1F6F1"]]),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        <circle cx="900" cy="200" r="58" fill="#FCEFD4"/>
+        ${nube(320, 160, 1.1, .8)}${nube(700, 110, .8, .7)}
+        <path d="M0 430Q200 330 420 400T820 370T1200 400V800H0Z" fill="#AFC8A6"/>
+        <path d="M0 500Q260 400 520 480T1000 450T1200 470V800H0Z" fill="#86AA84"/>
+        <path d="M0 580Q300 500 640 580T1200 560V800H0Z" fill="#5E8B67"/>
+        <path d="M-20 800C200 700 420 720 560 650S860 600 1220 640" stroke="#A8D2DE" stroke-width="30" fill="none" stroke-linecap="round"/>
+        <path d="M-20 800C200 700 420 720 560 650S860 600 1220 640" stroke="#E1F1F5" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="40 50" opacity=".8"/>
+        <path d="M0 700Q300 650 620 720T1200 690V800H0Z" fill="#3F6B54"/>
+        ${bosque(23, 940, 1200, (x) => 700 - (x - 940) * 0.05, 40, 70, "#2F5643")}`
+      };
+    },
+    playa(id) {
+      return {
+        defs: grad(`${id}c`, [[0, "#7FC0DB"], [0.7, "#D9ECEE"], [1, "#F6E7CF"]]) + grad(`${id}m`, [[0, "#3C8DAE"], [1, "#7CC3CF"]]),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        <circle cx="880" cy="250" r="140" fill="#FCE8C2" opacity=".35"/><circle cx="880" cy="250" r="72" fill="#FCE3B4"/>
+        ${nube(260, 150, 1.1, .8)}${nube(560, 220, .7, .6)}
+        <rect y="430" width="1200" height="190" fill="url(#${id}m)"/>
+        <g fill="#fff" opacity=".45"><rect x="760" y="455" width="230" height="4" rx="2"/><rect x="800" y="478" width="150" height="3" rx="2"/><rect x="120" y="500" width="180" height="3" rx="2"/><rect x="420" y="540" width="240" height="3" rx="2"/></g>
+        <g transform="translate(300 380)"><path d="M40 0v70H0Z" fill="#fff"/><path d="M46 12v58h36Z" fill="#E9DDC7"/><path d="M-10 74h100l-14 16H4Z" fill="#15334A"/></g>
+        <path d="M0 600Q300 560 600 590T1200 570V800H0Z" fill="#F7F4EC" opacity=".85"/>
+        <path d="M0 620Q320 585 640 610T1200 595V800H0Z" fill="#E9DDC7"/>
+        <path d="M0 700Q400 660 800 700T1200 690V800H0Z" fill="#E1CDA6"/>
+        <g transform="translate(760 520)"><rect x="-3" y="20" width="6" height="210" fill="#15334A"/><path d="M-150 40Q0-60 150 40Z" fill="#E7A64B"/><path d="M-150 40Q-75 0 -50 40ZM-50 40Q0-20 50 40Z" fill="#fff" opacity=".9"/><path d="M50 40Q75 0 150 40Z" fill="#245A73"/></g>
+        <rect x="560" y="720" width="160" height="22" rx="6" fill="#245A73" transform="rotate(-6 640 731)"/>`
+      };
+    },
+    ciudad(id) {
+      const r = aleatorio(5);
+      let edificios = "";
+      let ventanas = "";
+      for (let x = -20; x < 1220; x += 50 + r() * 40) {
+        const w = 44 + r() * 54, h = 120 + r() * 240;
+        if (x > 520 && x < 680) continue;
+        edificios += `<rect x="${x}" y="${560 - h}" width="${w}" height="${h + 40}" fill="${r() > 0.5 ? "#1F3D52" : "#2A4C63"}"/>`;
+        for (let wy = 560 - h + 20; wy < 540; wy += 26) for (let wx = x + 8; wx < x + w - 10; wx += 16) if (r() > 0.7) ventanas += `<rect x="${wx}" y="${wy}" width="6" height="9" fill="#F6D9A1" opacity=".75"/>`;
+      }
+      return {
+        defs: grad(`${id}c`, [[0, "#2D5671"], [0.55, "#C79A7E"], [1, "#F4CC97"]]) + grad(`${id}a`, [[0, "#1F4058"], [1, "#0F2738"]]),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        <circle cx="300" cy="420" r="90" fill="#F9DDB0" opacity=".6"/>
+        <g fill="#fff" opacity=".7"><circle cx="160" cy="110" r="1.6"/><circle cx="420" cy="80" r="1.4"/><circle cx="980" cy="120" r="1.8"/><circle cx="760" cy="60" r="1.2"/><circle cx="1100" cy="70" r="1.3"/></g>
+        ${edificios}${ventanas}
+        <path d="M600 150 580 205V600H620V205Z" fill="#163248"/><path d="M600 150 588 182h24Z" fill="#E7A64B" opacity=".55"/>
+        <rect y="590" width="1200" height="210" fill="url(#${id}a)"/>
+        <g fill="#F6D9A1" opacity=".35"><rect x="560" y="610" width="80" height="3" rx="1.5"/><rect x="574" y="630" width="52" height="3" rx="1.5"/><rect x="586" y="652" width="28" height="3" rx="1.5"/><rect x="200" y="640" width="120" height="2" rx="1"/><rect x="880" y="670" width="160" height="2" rx="1"/></g>`
+      };
+    },
+    mundo(id) {
+      let lineas = "";
+      for (let i = 0; i < 6; i++) lineas += `<ellipse cx="600" cy="1300" rx="${900 - i * 10}" ry="${720 - i * 90}" fill="none" stroke="#fff" stroke-width="2" opacity=".14"/>`;
+      for (let i = -3; i <= 3; i++) lineas += `<ellipse cx="600" cy="1300" rx="${Math.abs(i) * 260 + 40}" ry="740" fill="none" stroke="#fff" stroke-width="2" opacity=".1"/>`;
+      return {
+        defs: grad(`${id}c`, [[0, "#245A73"], [0.55, "#8DB9CC"], [1, "#F4D9B0"]]),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        <circle cx="950" cy="560" r="110" fill="#FBE3B8" opacity=".55"/>
+        ${lineas}
+        ${nube(200, 520, 1.6, .85)}${nube(520, 640, 1.9, .9)}${nube(1000, 690, 1.7, .9)}${nube(820, 300, .8, .4)}
+        <path d="M120 600C360 300 640 230 880 250" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="4 16" stroke-linecap="round" opacity=".85"/>
+        <g transform="translate(905 250) rotate(-8)" fill="#fff">
+          <path d="M-70 -6h110c16 0 26 4 26 8s-10 8-26 8H-70l-14-8Z"/>
+          <path d="M-6 -4 -40-56h18L22-4Z"/><path d="M-6 8 -40 52h18L22 8Z"/>
+          <path d="M-74-4-90-30h12l18 26Z"/>
+        </g>`
+      };
+    },
+    ruta(id, noche = false) {
+      const cielo = noche ? [[0, "#0B1F2E"], [0.6, "#1D4560"], [1, "#3E6E84"]] : [[0, "#9BCBE0"], [0.7, "#E4EFEF"], [1, "#F3E4C9"]];
+      let estrellas = "";
+      if (noche) {
+        const r = aleatorio(31);
+        for (let i = 0; i < 70; i++) estrellas += `<circle cx="${r() * 1200}" cy="${r() * 380}" r="${0.8 + r() * 1.6}" fill="#fff" opacity="${0.35 + r() * 0.6}"/>`;
+      }
+      return {
+        defs: grad(`${id}c`, cielo) + grad(`${id}luz`, [[0, "#FFF3C4", 0.75], [1, "#FFF3C4", 0]], 1, 0),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        ${estrellas}
+        ${noche ? `<circle cx="930" cy="150" r="46" fill="#F3EBD6"/><circle cx="950" cy="138" r="44" fill="#0F2738" opacity=".0"/>` : `<circle cx="930" cy="190" r="60" fill="#FCEBC6"/>${nube(300, 150, 1, .8)}${nube(760, 110, .8, .6)}`}
+        <path d="M0 470Q180 380 380 440T760 410T1200 430V640H0Z" fill="${noche ? "#1B3A4F" : "#9FB8C2"}"/>
+        <path d="M0 540Q260 470 560 530T1200 500V640H0Z" fill="${noche ? "#163246" : "#7E9F92"}"/>
+        <rect y="600" width="1200" height="34" fill="${noche ? "#14303F" : "#6F906A"}"/>
+        <rect y="630" width="1200" height="96" fill="${noche ? "#1A2A35" : "#3E4C56"}"/>
+        <rect y="636" width="1200" height="3" fill="#E9DDC7" opacity=".7"/>
+        <rect y="718" width="1200" height="3" fill="#E9DDC7" opacity=".7"/>
+        <path d="M0 678H1200" stroke="#E7A64B" stroke-width="5" stroke-dasharray="46 36" opacity=".95"/>
+        <rect y="726" width="1200" height="74" fill="${noche ? "#0F2738" : "#5B7E5A"}"/>
+        ${noche ? `<path d="M860 560 1200 520V660L860 600Z" fill="url(#${id}luz)"/>` : ""}
+        <g opacity=".5" stroke="${noche ? "#9FC0D0" : "#fff"}" stroke-width="4" stroke-linecap="round"><path d="M150 560H260"/><path d="M110 600H240"/><path d="M180 640H270"/></g>
+        ${colectivo(320, 448, 1, noche)}`
+      };
+    },
+    "ruta-noche"(id) { return ESCENAS.ruta(id, true); },
+    nieve(id) {
+      const r = aleatorio(13);
+      let copos = "";
+      for (let i = 0; i < 60; i++) copos += `<circle cx="${r() * 1200}" cy="${r() * 800}" r="${1.5 + r() * 3}" fill="#fff" opacity="${0.5 + r() * 0.5}"/>`;
+      return {
+        defs: grad(`${id}c`, [[0, "#9EC3D6"], [1, "#EDF4F7"]]),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        <path d="M0 480 200 260l120 110 180-220 170 190 130-110 200 200 200-120V800H0Z" fill="#FFFFFF"/>
+        <path d="M500 150 470 360l60-40 60 60 80-60ZM200 260l-30 170 70-30 60 30ZM830 230l-20 120 60-20 50 40 80 10Z" fill="#CFE0EA"/>
+        <path d="M0 560Q300 480 600 560T1200 540V800H0Z" fill="#E6EFF4"/>
+        ${bosque(41, -10, 1210, (x) => 620 + Math.sin(x / 120) * 20, 70, 140, "#245A73", true)}
+        <path d="M0 680Q400 640 800 690T1200 680V800H0Z" fill="#F7FAFC"/>
+        ${bosque(43, 20, 300, () => 740, 110, 170, "#15334A", true)}
+        ${copos}`
+      };
+    },
+    escapada(id) {
+      const casa = (x, y, e, c) => `<g transform="translate(${x} ${y}) scale(${e})"><rect x="0" y="20" width="60" height="44" fill="${c}"/><path d="M-6 22 30-8 66 22Z" fill="#B5553A"/><rect x="22" y="40" width="14" height="24" fill="#15334A" opacity=".7"/><rect x="8" y="30" width="10" height="10" fill="#F6D9A1"/><rect x="42" y="30" width="10" height="10" fill="#F6D9A1"/></g>`;
+      return {
+        defs: grad(`${id}c`, [[0, "#E9A86A"], [0.5, "#F4C992"], [1, "#F8E8CC"]]),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        <circle cx="600" cy="380" r="120" fill="#FCE3B4" opacity=".75"/>
+        <path d="M0 430Q240 330 480 400T900 360T1200 380V800H0Z" fill="#C49A7A" opacity=".8"/>
+        <path d="M0 500Q260 420 560 480T1200 450V800H0Z" fill="#8E8A6A"/>
+        <path d="M0 560Q300 500 620 560T1200 540V800H0Z" fill="#6E7F5C"/>
+        ${casa(430, 470, 1.1, "#F3EBDD")}${casa(520, 486, .9, "#E9DDC7")}${casa(610, 476, 1, "#F3EBDD")}
+        <g transform="translate(700 420)"><rect x="0" y="40" width="50" height="90" fill="#F3EBDD"/><path d="M-6 42 25 0 56 42Z" fill="#B5553A"/><rect x="20" y="-26" width="10" height="30" fill="#F3EBDD"/><rect x="14" y="-12" width="22" height="5" fill="#F3EBDD"/><rect x="18" y="86" width="14" height="44" fill="#15334A" opacity=".7"/></g>
+        <path d="M0 650Q300 610 620 660T1200 640V800H0Z" fill="#4F6E4E"/>
+        <path d="M560 800C600 720 640 700 600 640" stroke="#E9DDC7" stroke-width="22" fill="none" stroke-linecap="round" opacity=".9"/>
+        ${bosque(61, 20, 300, (x) => 680 - x * 0.08, 60, 110, "#3B5A41")}${bosque(67, 900, 1200, (x) => 650 + (x - 900) * 0.04, 60, 110, "#3B5A41")}`
+      };
+    },
+    camino(id) {
+      return {
+        defs: grad(`${id}c`, [[0, "#7FAFC6"], [0.6, "#DCECF2"], [1, "#F3DDB8"]]),
+        body: `<rect width="1200" height="800" fill="url(#${id}c)"/>
+        <circle cx="760" cy="300" r="64" fill="#FCE8C2"/>
+        ${nube(300, 160, 1.2, .7)}
+        <path d="M0 420 180 280l140 90 200-200 180 170 160-110 340 200V800H0Z" fill="#9CB8C6"/>
+        <g fill="#F7FAFB"><path d="M520 170 486 214l22-6 14 14 16-16 18 8Z"/><path d="M180 280 156 302l14-2 10 8 12-10 10 4Z"/></g>
+        <path d="M0 500Q300 430 600 490T1200 470V800H0Z" fill="#6C93A4"/>
+        <path d="M0 580Q300 520 620 590T1200 570V800H0Z" fill="#457185"/>
+        <path d="M430 800C470 700 700 690 650 620S560 540 610 500" stroke="#E9DDC7" stroke-width="70" fill="none" stroke-linecap="round"/>
+        <path d="M430 800C470 700 700 690 650 620S560 540 610 500" stroke="#E7A64B" stroke-width="4" fill="none" stroke-dasharray="22 22" stroke-linecap="round"/>
+        <path d="M0 700Q200 650 380 700L340 800H0Z" fill="#245A73"/>
+        ${bosque(71, 0, 360, (x) => 710 - Math.sin(x / 90) * 14, 60, 120, "#15334A")}
+        <path d="M840 800Q980 680 1200 660V800Z" fill="#245A73"/>
+        ${bosque(73, 900, 1200, (x) => 780 - (x - 840) * 0.32, 60, 110, "#15334A")}`
+      };
+    }
+  };
+
+  let contadorEscenas = 0;
+  function crearEscena(tipo, alt) {
+    const fn = ESCENAS[tipo] || ESCENAS.lagos;
+    const id = `esc${++contadorEscenas}`;
+    const { defs, body } = fn(id);
+    return `<svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${escaparHTML(alt)}" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs>${defs}</defs>${body}</svg>`;
+  }
+
+  // Devuelve una foto real (si existe) o la ilustración de referencia.
+  function crearMedia(imagen, escena, alt, eager = false) {
+    const src = urlSegura(imagen);
+    if (src) return `<img src="${escaparHTML(src)}" alt="${escaparHTML(alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+    return crearEscena(escena, alt);
+  }
+
+  function renderMedias() {
+    $$("[data-media]").forEach((el) => {
+      const clave = el.dataset.media;
+      el.insertAdjacentHTML("afterbegin", crearMedia(IMAGENES[clave], el.dataset.escena, el.dataset.alt || "", el.hasAttribute("data-eager")));
+    });
+  }
+
+  /* ==========================================================================
+     RENDER DE DATOS
+     ========================================================================== */
+
+  function renderDestinos() {
+    const grid = $("#destinos-grid");
+    if (!DESTINOS.length) {
+      grid.style.display = "block";
+      grid.innerHTML = `
+        <div class="vacio revelar">
+          <span class="vacio-icono">${icono("i-mapa")}</span>
+          <div><h3>Muy pronto, nuestros destinos</h3><p>Estamos preparando la información de nuestros destinos. Mientras tanto, consultanos por WhatsApp y contanos a dónde te gustaría viajar.</p></div>
+          <a class="btn btn-oscuro" data-wa="turismo">${icono("i-whatsapp", "icono-relleno")} Consultar destinos</a>
+        </div>`;
+      return;
+    }
+    grid.innerHTML = DESTINOS.map((d, i) => {
+      const alt = d.alt || `Ilustración de referencia de ${d.nombre}`;
+      const waAttrs = d.mensaje
+        ? `data-wa="personalizado" data-mensaje="${escaparHTML(d.mensaje)}"`
+        : `data-wa="destino" data-destino="${escaparHTML(d.nombre)}"`;
+      return `
+        <article class="destino revelar${i === 0 ? " destacado" : ""}" style="--d:${(i % 3) * 0.08}s">
+          <div class="media">
+            ${crearMedia(d.imagen, d.escena, alt)}
+            ${tieneValor(d.categoria) ? `<span class="destino-cat">${escaparHTML(d.categoria)}</span>` : ""}
+          </div>
+          <div class="destino-cuerpo">
+            <h3>${escaparHTML(d.nombre)}</h3>
+            ${tieneValor(d.descripcion) ? `<p>${escaparHTML(d.descripcion)}</p>` : ""}
+            <div class="destino-pie">
+              <a class="btn btn-contorno" ${waAttrs} aria-label="Consultar este destino: ${escaparHTML(d.nombre)}">
+                ${icono("i-whatsapp", "icono-relleno")} Consultar este destino
+              </a>
+            </div>
+          </div>
+        </article>`;
+    }).join("");
+  }
+
+  function renderProximos() {
+    const cont = $("#proximos-contenedor");
+    const viajes = PROXIMOS_VIAJES.filter((v) => v && tieneValor(v.titulo));
+    if (!viajes.length) {
+      cont.innerHTML = `
+        <div class="vacio">
+          <span class="vacio-icono">${icono("i-calendario")}</span>
+          <div>
+            <h3>Nuevas salidas en preparación</h3>
+            <p>Estamos preparando nuevas propuestas para vos. Consultanos por WhatsApp para conocer los próximos destinos y las fechas disponibles.</p>
+          </div>
+          <a class="btn btn-primario" data-wa="proximos">${icono("i-whatsapp", "icono-relleno")} Consultar próximas salidas</a>
+        </div>`;
+      return;
+    }
+    cont.innerHTML = `<div class="proximos-grid">${viajes.map((v) => {
+      const datos = [];
+      if (tieneValor(v.salida)) datos.push(["i-calendario", `Salida: ${formatearFecha(v.salida)}`]);
+      if (tieneValor(v.regreso)) datos.push(["i-calendario", `Regreso: ${formatearFecha(v.regreso)}`]);
+      if (tieneValor(v.duracion)) datos.push(["i-reloj", `Duración: ${v.duracion}`]);
+      if (tieneValor(v.transporte)) datos.push(["i-colectivo", `Transporte: ${v.transporte}`]);
+      const incluye = Array.isArray(v.incluye) ? v.incluye.filter(tieneValor) : [];
+      const alt = v.alt || `Imagen del viaje ${v.titulo}`;
+      return `
+        <article class="viaje">
+          <div class="media">${crearMedia(v.imagen, v.escena || "lagos", alt)}</div>
+          <div class="viaje-cuerpo">
+            ${tieneValor(v.estado) ? `<span class="viaje-estado">${escaparHTML(v.estado)}</span>` : ""}
+            <h3>${escaparHTML(v.titulo)}</h3>
+            ${tieneValor(v.descripcion) ? `<p>${escaparHTML(v.descripcion)}</p>` : ""}
+            ${datos.length ? `<ul class="viaje-datos">${datos.map(([ic, t]) => `<li>${icono(ic)}<span>${escaparHTML(t)}</span></li>`).join("")}</ul>` : ""}
+            ${incluye.length ? `<ul class="viaje-datos" aria-label="Servicios incluidos">${incluye.map((t) => `<li>${icono("i-check")}<span>${escaparHTML(t)}</span></li>`).join("")}</ul>` : ""}
+            ${tieneValor(v.precio) ? `<p class="viaje-precio">${escaparHTML(v.precio)}</p>` : ""}
+            <a class="btn btn-oscuro" data-wa="viaje" data-viaje="${escaparHTML(v.titulo)}" aria-label="Consultar por el viaje ${escaparHTML(v.titulo)}">${icono("i-whatsapp", "icono-relleno")} Consultar este viaje</a>
+          </div>
+        </article>`;
+    }).join("")}</div>`;
+  }
+
+  function renderOpciones() {
+    const llenar = (sel, opciones, placeholder) => {
+      sel.innerHTML = `<option value="">${placeholder}</option>` + opciones.map((o) => `<option>${escaparHTML(o)}</option>`).join("");
+    };
+    llenar($("#t-destino"), OPCIONES_DESTINO, "Elegí un destino");
+    llenar($("#t-tipo"), TIPOS_VIAJE, "Elegí el tipo de viaje");
+    ["#t-pasajeros", "#p-pasajeros"].forEach((s) => $(s).max = PASAJEROS_MAX);
+  }
+
+  function renderLogo() {
+    const src = urlSegura(EMPRESA.logo);
+    if (!src) return;
+    $$("[data-logo]").forEach((el) => {
+      el.innerHTML = `<img class="marca-logo" src="${escaparHTML(src)}" alt="" decoding="async">`;
+    });
+  }
+
+  function renderContacto() {
+    const items = [];
+    const n = numeroWhatsApp();
+    if (n) items.push({ ic: "i-whatsapp", relleno: true, et: "WhatsApp", tx: `+${n}`, wa: "general" });
+    if (tieneValor(EMPRESA.telefono)) {
+      const tel = String(EMPRESA.telefono).replace(/[^\d+]/g, "");
+      items.push({ ic: "i-telefono", et: "Teléfono", tx: EMPRESA.telefono, href: tel.length >= 6 ? `tel:${tel}` : null });
+    }
+    if (tieneValor(EMPRESA.email) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(EMPRESA.email.trim())) {
+      items.push({ ic: "i-mail", et: "Correo electrónico", tx: EMPRESA.email.trim(), href: `mailto:${EMPRESA.email.trim()}` });
+    }
+    const ig = urlSegura(EMPRESA.instagram);
+    if (ig) items.push({ ic: "i-instagram", et: "Instagram", tx: ig.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""), href: ig, externo: true });
+    const fb = urlSegura(EMPRESA.facebook);
+    if (fb) items.push({ ic: "i-facebook", et: "Facebook", tx: fb.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""), href: fb, externo: true });
+    if (tieneValor(EMPRESA.direccion)) items.push({ ic: "i-pin", et: "Dirección", tx: EMPRESA.direccion });
+    if (tieneValor(EMPRESA.horarios)) items.push({ ic: "i-reloj", et: "Horarios de atención", tx: EMPRESA.horarios });
+
+    const lista = $("#contacto-datos");
+    if (items.length) {
+      lista.hidden = false;
+      lista.innerHTML = items.map((it) => {
+        const contenido = `${icono(it.ic, it.relleno ? "icono-relleno" : "")}<div><small>${escaparHTML(it.et)}</small><span>${escaparHTML(it.tx)}</span></div>`;
+        if (it.wa) return `<li><a class="dato" data-wa="${it.wa}">${contenido}</a></li>`;
+        if (it.href) return `<li><a class="dato" href="${escaparHTML(it.href)}"${it.externo ? ' target="_blank" rel="noopener noreferrer"' : ""}>${contenido}</a></li>`;
+        return `<li><div class="dato">${contenido}</div></li>`;
+      }).join("");
+    }
+
+    // Footer: datos adicionales (el acceso a WhatsApp ya está en el HTML)
+    const footer = $("#footer-contacto");
+    items.filter((it) => !it.wa).forEach((it) => {
+      const li = document.createElement("li");
+      const contenido = `${icono(it.ic)}${escaparHTML(it.tx)}`;
+      li.innerHTML = it.href
+        ? `<a href="${escaparHTML(it.href)}"${it.externo ? ' target="_blank" rel="noopener noreferrer"' : ""}>${contenido}</a>`
+        : `<span>${contenido}</span>`;
+      footer.appendChild(li);
+    });
+  }
+
+  /* ==========================================================================
+     FORMULARIOS
+     ========================================================================== */
+
+  function setError(campo, mensaje) {
+    const err = document.getElementById(`${campo.id}-error`);
+    if (mensaje) {
+      campo.setAttribute("aria-invalid", "true");
+      if (err) err.textContent = mensaje;
+    } else {
+      campo.removeAttribute("aria-invalid");
+      if (err) err.textContent = "";
+    }
+    return !mensaje;
+  }
+
+  function validarPasajeros(campo) {
+    const v = campo.value.trim();
+    const n = Number(v);
+    if (!v || !Number.isInteger(n) || n < 1 || n > PASAJEROS_MAX) return `Indicá una cantidad entera entre 1 y ${PASAJEROS_MAX} pasajeros.`;
+    return "";
+  }
+  const texto = (min, msg) => (campo) => (campo.value.trim().length < min ? msg : "");
+
+  // Construye el mensaje omitiendo los campos vacíos.
+  function construirMensaje(intro, pares, cierre) {
+    const lineas = [intro];
+    pares.forEach(([etiqueta, valor]) => { if (tieneValor(valor)) lineas.push(`${etiqueta}: ${String(valor).trim()}`); });
+    lineas.push(cierre);
+    return lineas.join("\n\n");
+  }
+
+  function mostrarResultado(contenedor, mensaje) {
+    const url = crearLinkWhatsApp(mensaje);
+    contenedor.hidden = false;
+    contenedor.classList.toggle("pendiente", !url);
+    const preview = `<details${url ? "" : " open"}><summary>Ver el mensaje preparado</summary><pre class="mensaje-preview">${escaparHTML(mensaje)}</pre></details>`;
+
+    if (!url) {
+      contenedor.innerHTML = `
+        <h4>${icono("i-info")} Número de WhatsApp pendiente de configuración</h4>
+        <p>El mensaje está listo, pero todavía no se configuró el número de WhatsApp de la empresa. Mientras tanto podés comunicarte por los otros medios de contacto disponibles.</p>
+        ${preview}`;
+      contenedor.focus({ preventScroll: true });
+      contenedor.scrollIntoView({ behavior: reduceMotion() ? "auto" : "smooth", block: "nearest" });
+      return;
+    }
+
+    const ventana = window.open(url, "_blank");
+    if (ventana) { try { ventana.opener = null; } catch (e) { /* sin acción */ } }
+    const bloqueado = !ventana;
+    contenedor.innerHTML = `
+      <h4>${icono("i-whatsapp", "icono-relleno")} ${bloqueado ? "Tu mensaje está listo" : "Abrimos WhatsApp con tu mensaje"}</h4>
+      <p>${bloqueado
+        ? "Tu navegador no permitió abrir WhatsApp automáticamente. Usá el siguiente botón para continuar."
+        : "Revisá el mensaje y envialo desde WhatsApp para completar tu consulta. Si no se abrió, usá el siguiente botón."}</p>
+      <a class="btn btn-oscuro" href="${escaparHTML(url)}" target="_blank" rel="noopener noreferrer">${icono("i-whatsapp", "icono-relleno")} Continuar en WhatsApp</a>
+      ${preview}`;
+    if (bloqueado) contenedor.focus({ preventScroll: true });
+    contenedor.scrollIntoView({ behavior: reduceMotion() ? "auto" : "smooth", block: "nearest" });
+  }
+
+  function iniciarFormulario({ form, reglas, resumen, resultado, construir }) {
+    const campos = () => Object.keys(reglas).map((id) => document.getElementById(id)).filter((c) => c && !c.disabled);
+
+    const validar = (campo) => setError(campo, reglas[campo.id](campo));
+
+    // Revalidar mientras se corrige
+    form.addEventListener("input", (e) => {
+      const c = e.target;
+      if (reglas[c.id] && c.getAttribute("aria-invalid") === "true") validar(c);
+      if (resumen.textContent && campos().every((x) => x.getAttribute("aria-invalid") !== "true")) resumen.textContent = "";
+    });
+    form.addEventListener("focusout", (e) => {
+      const c = e.target;
+      if (reglas[c.id] && c.dataset.tocado === "1") validar(c);
+    });
+    form.addEventListener("change", (e) => { if (reglas[e.target.id]) e.target.dataset.tocado = "1"; });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const invalidos = campos().filter((c) => { c.dataset.tocado = "1"; return !validar(c); });
+      if (invalidos.length) {
+        resultado.hidden = true;
+        resumen.textContent = invalidos.length === 1
+          ? "Revisá el campo marcado para continuar."
+          : `Revisá los ${invalidos.length} campos marcados para continuar.`;
+        invalidos[0].focus();
+        return;
+      }
+      resumen.textContent = "";
+      mostrarResultado(resultado, construir());
+    });
+  }
+
+  function iniciarFormTurismo() {
+    const form = $("#form-turismo");
+    iniciarFormulario({
+      form,
+      resumen: $("#t-resumen"),
+      resultado: $("#t-resultado"),
+      reglas: {
+        "t-nombre": texto(3, "Ingresá tu nombre y apellido."),
+        "t-telefono": (c) => {
+          const v = c.value.trim();
+          if (!v) return "";
+          const digitos = v.replace(/\D/g, "");
+          return (/^[\d\s()+-]+$/.test(v) && digitos.length >= 6 && digitos.length <= 15) ? "" : "Ingresá un teléfono válido o dejá el campo vacío.";
+        },
+        "t-pasajeros": validarPasajeros,
+        "t-destino": (c) => (c.value ? "" : "Elegí un destino de interés."),
+        "t-tipo": (c) => (c.value ? "" : "Elegí el tipo de viaje.")
+      },
+      construir: () => construirMensaje(
+        "Hola, Altamirano Nosiglia. Quisiera recibir información sobre un viaje turístico.",
+        [
+          ["Nombre y apellido", $("#t-nombre").value],
+          ["Teléfono", $("#t-telefono").value],
+          ["Destino de interés", $("#t-destino").value],
+          ["Tipo de viaje", $("#t-tipo").value],
+          ["Fecha o temporada", $("#t-fecha").value],
+          ["Cantidad de pasajeros", $("#t-pasajeros").value],
+          ["Comentarios adicionales", $("#t-comentarios").value]
+        ],
+        "Quedo atento/a a la información. ¡Muchas gracias!"
+      )
+    });
+  }
+
+  function iniciarFormPasajes() {
+    const form = $("#form-pasajes-form");
+    const fecha = $("#p-fecha");
+    const regreso = $("#p-regreso");
+    const campoRegreso = $("#p-regreso-campo");
+    const esIdaVuelta = () => $("#p-tipo-vuelta").checked;
+    const hoy = hoyISO();
+    fecha.min = hoy;
+    regreso.min = hoy;
+
+    function actualizarTipo() {
+      const iv = esIdaVuelta();
+      campoRegreso.hidden = !iv;
+      regreso.disabled = !iv;
+      regreso.required = iv;
+      if (!iv) setError(regreso, "");
+      actualizarResumen();
+    }
+    fecha.addEventListener("change", () => {
+      regreso.min = fecha.value || hoy;
+      if (regreso.value && regreso.dataset.tocado === "1") setError(regreso, reglas["p-regreso"](regreso));
+    });
+    $$('input[name="tipo"]', form).forEach((r) => r.addEventListener("change", actualizarTipo));
+
+    const reglas = {
+      "p-nombre": texto(3, "Ingresá tu nombre y apellido."),
+      "p-origen": texto(2, "Indicá la localidad de origen."),
+      "p-destino": (c) => {
+        if (c.value.trim().length < 2) return "Indicá la localidad de destino.";
+        if (c.value.trim().toLowerCase() === $("#p-origen").value.trim().toLowerCase()) return "El destino debe ser distinto de la localidad de origen.";
+        return "";
+      },
+      "p-fecha": (c) => {
+        if (!c.value) return "Seleccioná la fecha estimada del viaje.";
+        if (c.value < hoy) return "La fecha del viaje no puede ser anterior a hoy.";
+        return "";
+      },
+      "p-pasajeros": validarPasajeros,
+      "p-regreso": (c) => {
+        if (!esIdaVuelta()) return "";
+        if (!c.value) return "Seleccioná la fecha de regreso.";
+        if (fecha.value && c.value < fecha.value) return "La fecha de regreso no puede ser anterior a la de salida.";
+        return "";
+      }
+    };
+
+    // Resumen tipo boleto (solo refleja lo que escribe el usuario)
+    function pintar(clave, valor, placeholder) {
+      const el = form.closest(".boleto").querySelector(`[data-resumen="${clave}"]`);
+      if (!el) return;
+      if (tieneValor(valor)) el.textContent = valor;
+      else el.innerHTML = `<span class="vacio-txt">${placeholder}</span>`;
+    }
+    function actualizarResumen() {
+      pintar("origen", $("#p-origen").value.trim(), "¿Desde dónde?");
+      pintar("destino", $("#p-destino").value.trim(), "¿Hacia dónde?");
+      pintar("fecha", formatearFecha(fecha.value), "—");
+      pintar("regreso", esIdaVuelta() ? formatearFecha(regreso.value) : "", "—");
+      const p = $("#p-pasajeros").value.trim();
+      pintar("pasajeros", p, "—");
+      pintar("tipo", esIdaVuelta() ? "Ida y vuelta" : "Solo ida", "—");
+    }
+    form.addEventListener("input", actualizarResumen);
+    form.addEventListener("change", actualizarResumen);
+
+    iniciarFormulario({
+      form,
+      reglas,
+      resumen: $("#p-resumen"),
+      resultado: $("#p-resultado"),
+      construir: () => {
+        const iv = esIdaVuelta();
+        return construirMensaje(
+          "Hola, Altamirano Nosiglia. Quisiera consultar por un pasaje de colectivo.",
+          [
+            ["Nombre y apellido", $("#p-nombre").value],
+            ["Origen", $("#p-origen").value],
+            ["Destino", $("#p-destino").value],
+            ["Fecha de salida", formatearFecha(fecha.value)],
+            ["Cantidad de pasajeros", $("#p-pasajeros").value],
+            ["Tipo de pasaje", iv ? "Ida y vuelta" : "Solo ida"],
+            ["Fecha de regreso", iv ? formatearFecha(regreso.value) : ""],
+            ["Comentarios adicionales", $("#p-comentarios").value]
+          ],
+          "Quisiera recibir información sobre las opciones disponibles, horarios y tarifas. Muchas gracias."
+        );
+      }
+    });
+    actualizarTipo();
+  }
+
+  /* ==========================================================================
+     NAVEGACIÓN, ANIMACIONES Y UI
+     ========================================================================== */
+
+  function iniciarNavegacion() {
+    const header = $("#header");
+    const toggle = $(".nav-toggle");
+    const nav = $("#menu-principal");
+    const escritorio = window.matchMedia("(min-width: 1340px)");
+
+    const alScroll = () => header.classList.toggle("solido", window.scrollY > 40);
+    alScroll();
+    window.addEventListener("scroll", alScroll, { passive: true });
+
+    function abrir(estado) {
+      toggle.setAttribute("aria-expanded", String(estado));
+      toggle.setAttribute("aria-label", estado ? "Cerrar menú" : "Abrir menú");
+      nav.classList.toggle("abierto", estado);
+      header.classList.toggle("menu-abierto", estado);
+    }
+    toggle.addEventListener("click", () => abrir(toggle.getAttribute("aria-expanded") !== "true"));
+    nav.addEventListener("click", (e) => { if (e.target.closest("a")) abrir(false); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") { abrir(false); toggle.focus(); }
+    });
+    document.addEventListener("click", (e) => {
+      if (toggle.getAttribute("aria-expanded") === "true" && !header.contains(e.target)) abrir(false);
+    });
+    escritorio.addEventListener("change", () => abrir(false));
+
+    // Enlace activo según la sección visible
+    const enlaces = $$(".nav-lista a");
+    const mapa = new Map(enlaces.map((a) => [a.getAttribute("href").slice(1), a]));
+    const objetivos = {
+      servicios: "inicio", "por-que": "temporadas", "consulta-viaje": "viajes", preguntas: "pasajes"
+    };
+    if ("IntersectionObserver" in window) {
+      const obs = new IntersectionObserver((entradas) => {
+        entradas.forEach((en) => {
+          if (!en.isIntersecting) return;
+          const id = objetivos[en.target.id] || en.target.id;
+          enlaces.forEach((a) => a.classList.remove("activo"));
+          const a = mapa.get(id);
+          if (a) a.classList.add("activo");
+        });
+      }, { rootMargin: "-45% 0px -50% 0px" });
+      $$("main > section[id]").forEach((s) => obs.observe(s));
+    }
+  }
+
+  function iniciarRevelado() {
+    const elementos = $$(".revelar");
+    if (!("IntersectionObserver" in window) || reduceMotion()) {
+      elementos.forEach((el) => el.classList.add("visible"));
+      return;
+    }
+    const obs = new IntersectionObserver((entradas, o) => {
+      entradas.forEach((en) => {
+        if (en.isIntersecting) { en.target.classList.add("visible"); o.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    elementos.forEach((el) => obs.observe(el));
+  }
+
+  // Oculta el botón flotante en pantallas chicas cuando un botón de envío está a la vista
+  function iniciarFlotante() {
+    const boton = $("#wa-flotante");
+    if (!("IntersectionObserver" in window)) return;
+    const visibles = new Set();
+    const chico = window.matchMedia("(max-width: 760px)");
+    const actualizar = () => boton.classList.toggle("oculto", chico.matches && visibles.size > 0);
+    const obs = new IntersectionObserver((entradas) => {
+      entradas.forEach((en) => (en.isIntersecting ? visibles.add(en.target) : visibles.delete(en.target)));
+      actualizar();
+    });
+    $$(".form-acciones, .form-resultado, .footer-legal").forEach((el) => obs.observe(el));
+    chico.addEventListener("change", actualizar);
+  }
+
+  function iniciarAvisoConfig() {
+    if (numeroWhatsApp()) return;
+    console.warn("[Altamirano Nosiglia] Configurá EMPRESA.whatsapp con el número real (solo dígitos, formato internacional).");
+    let oculto = false;
+    try { oculto = sessionStorage.getItem("an-aviso-oculto") === "1"; } catch (e) { /* sin almacenamiento */ }
+    if (oculto) return;
+    const aviso = $("#aviso-config");
+    aviso.hidden = false;
+    aviso.querySelector("button").addEventListener("click", () => {
+      aviso.hidden = true;
+      try { sessionStorage.setItem("an-aviso-oculto", "1"); } catch (e) { /* sin almacenamiento */ }
+    });
+  }
+
+  /* ==========================================================================
+     INICIO
+     ========================================================================== */
+  document.addEventListener("DOMContentLoaded", () => {
+    renderLogo();
+    renderMedias();
+    renderDestinos();
+    renderProximos();
+    renderOpciones();
+    renderContacto();
+    conectarWhatsApp();
+    document.addEventListener("click", avisoPendiente);
+    document.addEventListener("keydown", avisoPendiente);
+
+    iniciarNavegacion();
+    iniciarFormTurismo();
+    iniciarFormPasajes();
+    iniciarRevelado();
+    iniciarFlotante();
+    iniciarAvisoConfig();
+
+    $("#anio").textContent = new Date().getFullYear();
+  });
+  </script>
+</body>
+</html>
