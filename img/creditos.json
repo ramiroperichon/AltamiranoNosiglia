@@ -1,0 +1,119 @@
+{
+ "hero-bariloche": {
+  "titulo": "File:Llao Llao Peninsula.jpg",
+  "autor": "Fernando",
+  "licencia": "CC BY-SA 4.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Llao_Llao_Peninsula.jpg",
+  "original": "5462x3641",
+  "final": "5462x3641"
+ },
+ "bariloche": {
+  "titulo": "File:VistadelLagoNahuelHuapi.jpg",
+  "autor": "Ezarate",
+  "licencia": "CC BY-SA 3.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:VistadelLagoNahuelHuapi.jpg",
+  "original": "4460x1740",
+  "final": "2610x1740"
+ },
+ "iguazu": {
+  "titulo": "File:Iguazu-Falls-January-2013.jpg",
+  "autor": "Acediscovery",
+  "licencia": "CC BY 4.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by/4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Iguazu-Falls-January-2013.jpg",
+  "original": "3500x2534",
+  "final": "3500x2534"
+ },
+ "mendoza": {
+  "titulo": "File:Vineyard in Mendoza, Argentina.jpg",
+  "autor": "David",
+  "licencia": "CC BY 2.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by/2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Vineyard_in_Mendoza,_Argentina.jpg",
+  "original": "3147x1951",
+  "final": "3147x1951"
+ },
+ "turismo-mendoza": {
+  "titulo": "File:Finca - foto 1 of 6.jpg",
+  "autor": "Santiago Achaval",
+  "licencia": "CC BY-SA 4.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Finca_-_foto_1_of_6.jpg",
+  "original": "3840x2563",
+  "final": "3840x2563"
+ },
+ "jujuy": {
+  "titulo": "File:Purmamarca (Argentine).JPG",
+  "autor": "Bachelot Pierre-J-P",
+  "licencia": "CC BY-SA 3.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Purmamarca_(Argentine).JPG",
+  "original": "3072x2048",
+  "final": "3072x2048"
+ },
+ "mardelplata": {
+  "titulo": "File:Mar del Plata City.jpg",
+  "autor": "EduWiki",
+  "licencia": "CC BY-SA 4.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Mar_del_Plata_City.jpg",
+  "original": "3264x1840",
+  "final": "3264x1840"
+ },
+ "buenosaires": {
+  "titulo": "File:Puerto Madero, Buenos Aires, Argentina2.jpg",
+  "autor": "Diego Delso",
+  "licencia": "CC BY-SA 3.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Puerto_Madero,_Buenos_Aires,_Argentina2.jpg",
+  "original": "3692x1956",
+  "final": "2934x1956"
+ },
+ "internacional": {
+  "titulo": "File:A wing tip of an airplane (40118125441).jpg",
+  "autor": "U.S. Department of Agriculture",
+  "licencia": "Public domain",
+  "licenciaUrl": "",
+  "fuente": "https://commons.wikimedia.org/wiki/File:A_wing_tip_of_an_airplane_(40118125441).jpg",
+  "original": "4288x2848",
+  "final": "4288x2848"
+ },
+ "ruta-flechas": {
+  "titulo": "File:Ruta-40-Northern-Argentina.jpg",
+  "autor": "Dan Peschio",
+  "licencia": "CC BY-SA 3.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Ruta-40-Northern-Argentina.jpg",
+  "original": "3456x2164",
+  "final": "3456x2164"
+ },
+ "ruta-santacruz": {
+  "titulo": "File:Ruta 40, Santa Cruz.jpg",
+  "autor": "Raf24~commonswiki",
+  "licencia": "CC BY 4.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by/4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Ruta_40,_Santa_Cruz.jpg",
+  "original": "5184x3888",
+  "final": "3110x3888"
+ },
+ "ruta-amanecer": {
+  "titulo": "File:Ruta-40-empty.jpg",
+  "autor": "CrookedTreeCreative",
+  "licencia": "CC BY-SA 4.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Ruta-40-empty.jpg",
+  "original": "3456x1936",
+  "final": "3097x1936"
+ },
+ "tilcara": {
+  "titulo": "File:Tilcara-VistadesdePucaradeTilcara-01158.jpg",
+  "autor": "Ezarate",
+  "licencia": "CC BY-SA 4.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Tilcara-VistadesdePucaradeTilcara-01158.jpg",
+  "original": "5456x3632",
+  "final": "5456x3632"
+ }
+}
