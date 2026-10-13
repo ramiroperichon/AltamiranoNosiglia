@@ -97,5 +97,50 @@
   "fuente": "https://commons.wikimedia.org/wiki/File:Ruta-40-empty.jpg",
   "original": "3456x1936",
   "final": "3097x1936"
+ },
+ "bariloche": {
+  "titulo": "File:Cerro Campanario - view.jpg",
+  "autor": "Raf24~commonswiki",
+  "licencia": "CC BY 4.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by/4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Cerro_Campanario_-_view.jpg",
+  "original": "5184x3888",
+  "final": "5184x3888"
+ },
+ "cordoba": {
+  "titulo": "File:La Cumbrecita Arroyo.jpg",
+  "autor": "Fscotta",
+  "licencia": "CC BY-SA 4.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:La_Cumbrecita_Arroyo.jpg",
+  "original": "5312x2988",
+  "final": "4482x2988"
+ },
+ "invierno": {
+  "titulo": "File:Ruta 40 Nevada.jpg",
+  "autor": "Paola2022",
+  "licencia": "CC BY-SA 4.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Ruta_40_Nevada.jpg",
+  "original": "4624x3472",
+  "final": "4624x3472"
+ },
+ "verano": {
+  "titulo": "File:Vista a una playa en Puerto Madryn..JPG",
+  "autor": "Paco Martinez",
+  "licencia": "CC BY-SA 3.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Vista_a_una_playa_en_Puerto_Madryn..JPG",
+  "original": "3264x2448",
+  "final": "3264x2448"
+ },
+ "escapadas": {
+  "titulo": "File:San Martín de Los Andes (25944717001).jpg",
+  "autor": "Emilio Küffer from Ciudad Autónoma de Buenos Aires, Argentina",
+  "licencia": "CC BY-SA 2.0",
+  "licenciaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:San_Mart%C3%ADn_de_Los_Andes_(25944717001).jpg",
+  "original": "5726x3807",
+  "final": "5726x3807"
  }
 }
